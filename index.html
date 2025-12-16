@@ -2,12 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Paul’s Auto Body | Collision Repair & Paint Shop in San Jose, CA</title>
+  <title>Paul's Auto Body | Collision Repair & Auto Paint in San Jose, CA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Paul’s Auto Body in San Jose offers collision repair, body work, paint services, and truck body repair. 24/7 assistance and all insurance accepted."
+    content="Paul's Auto Body in San Jose, CA provides expert collision repair, auto body work, paint services, and truck body repair. 24/7 emergency calls and all insurance accepted."
   />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.example.com/" />
+
+  <meta property="og:title" content="Paul's Auto Body | Collision Repair & Auto Paint in San Jose, CA" />
+  <meta property="og:description" content="Collision repair, body work, and paint services in San Jose. 24/7 emergency calls and all insurance accepted." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.example.com/" />
+  <meta property="og:image" content="https://images.pexels.com/photos/4489734/pexels-photo-4489734.jpeg" />
+
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,44 +24,80 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet"
   />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoBodyShop",
+    "name": "Paul's Auto Body",
+    "image": "https://images.pexels.com/photos/4489734/pexels-photo-4489734.jpeg",
+    "url": "https://www.example.com/",
+    "telephone": "+1-408-995-0770",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "680 N 13th St",
+      "addressLocality": "San Jose",
+      "addressRegion": "CA",
+      "postalCode": "95112",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    ],
+    "description": "Collision repair, auto body work, paint services, and truck body repair in San Jose, CA. 24/7 emergency calls and all insurance accepted."
+  }
+  </script>
 </head>
 
 <body>
-  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="#top" class="logo">
-        <span class="logo-mark">PA</span>
-        <span class="logo-text">
-          <span class="logo-title">Paul’s Auto Body</span>
-          <span class="logo-subtitle">Collision & Body Repair</span>
-        </span>
+        <div class="logo-mark">PA</div>
+        <div class="logo-text">
+          <span class="logo-title">Paul's Auto Body</span>
+          <span class="logo-subtitle">Collision & Paint Specialists</span>
+        </div>
       </a>
 
-      <nav class="nav">
+      <nav class="nav" aria-label="Main navigation">
         <a href="#services">Services</a>
         <a href="#why-us">Why Us</a>
+        <a href="#process">How It Works</a>
         <a href="#reviews">Reviews</a>
         <a href="#contact">Contact</a>
       </nav>
 
       <div class="header-cta">
-        <a href="tel:+14089950770" class="btn btn-ghost small-hide">Call (408) 995-0770</a>
+        <a href="tel:+14089950770" class="btn btn-ghost hide-sm">Call (408) 995-0770</a>
         <a href="#contact" class="btn btn-primary">Book Appointment</a>
       </div>
     </div>
   </header>
 
   <main id="top">
-    <!-- HERO -->
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-inner">
         <div class="hero-text">
-          <h1>We care about your car like it’s our own.</h1>
-          <p>
-            Paul’s Auto Body repairs everything from minor dents to major collision damage.
-            Expert bodywork, color-matched paint, and 24/7 support from a local shop you can trust
-            in San Jose, CA.
+          <p class="eyebrow">San Jose · Auto Body & Collision Repair</p>
+          <h1 id="hero-title">We care about your car like it’s our own.</h1>
+          <p class="hero-copy">
+            From minor dents to major collisions, Paul's Auto Body restores your vehicle
+            with precise bodywork, factory-quality paint, and 24/7 support from a local
+            San Jose shop you can trust.
           </p>
 
           <div class="hero-actions">
@@ -72,69 +117,79 @@
             </a>
           </div>
 
-          <div class="hero-meta">
-            <span class="badge">24/7 Emergency Calls</span>
-            <span class="hero-meta-item">All insurance companies accepted</span>
-            <span class="hero-meta-item">San Jose, California</span>
-          </div>
+          <dl class="hero-meta">
+            <div class="meta-item">
+              <dt>Availability</dt>
+              <dd>24/7 emergency calls</dd>
+            </div>
+            <div class="meta-item">
+              <dt>Insurance</dt>
+              <dd>All insurance companies accepted</dd>
+            </div>
+            <div class="meta-item">
+              <dt>Location</dt>
+              <dd>680 N 13th St, San Jose, CA 95112</dd>
+            </div>
+          </dl>
         </div>
 
-        <aside class="hero-card">
-          <h2>Emergency Collision Help 24/7</h2>
-          <p>
-            Had an accident? Call anytime and we’ll guide you on towing, insurance,
-            and next steps.
-          </p>
-
-          <div class="hero-contacts">
-            <div>
-              <span class="label">Office</span>
-              <a href="tel:+14089950770" class="hero-phone">(408) 995-0770</a>
-            </div>
-            <div>
-              <span class="label">Cell</span>
-              <a href="tel:+14084994368" class="hero-phone">(408) 499-4368</a>
-            </div>
-          </div>
-
-          <div class="hero-hours">
-            <p class="label">Working Hours</p>
-            <p class="small">
-              Weekdays: <strong>24 hours</strong><br />
-              Saturday: <strong>24 hours</strong><br />
-              Sunday: <strong>24 hours</strong>
-            </p>
-          </div>
-
-          <p class="small">
-            Shop Address:<br />
-            <strong>680 N 13th St, San Jose, CA 95112, United States</strong>
-          </p>
-        </aside>
+        <figure class="hero-media">
+          <img
+            src="https://images.pexels.com/photos/4489734/pexels-photo-4489734.jpeg?auto=compress&cs=tinysrgb&w=900"
+            alt="Auto body technician repairing a red car bumper"
+            loading="lazy"
+          />
+          <figcaption>Precision repairs, color-matched paint, and clear communication.</figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="section">
-      <div class="container">
-        <div class="section-header">
-          <h2>What We Do</h2>
-          <p class="section-intro">
-            From everyday fender benders to major collision damage, Paul’s Auto Body restores
-            your vehicle with precision, modern equipment, and quality materials.
-          </p>
+    <section class="image-strip" aria-hidden="true">
+      <div class="container image-strip-inner">
+        <div class="image-strip-item">
+          <img
+            src="https://images.pexels.com/photos/3806269/pexels-photo-3806269.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt="Car being prepared for painting in a booth"
+            loading="lazy"
+          />
         </div>
+        <div class="image-strip-item">
+          <img
+            src="https://images.pexels.com/photos/4489732/pexels-photo-4489732.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt=""
+            loading="lazy"
+          />
+        </div>
+        <div class="image-strip-item">
+          <img
+            src="https://images.pexels.com/photos/3807640/pexels-photo-3807640.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt=""
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section section-light">
+      <div class="container">
+        <header class="section-header">
+          <h2>Collision & body services</h2>
+          <p class="section-intro">
+            Complete auto body care in one place. We handle everything from the first estimate
+            to the final polish so your car comes back looking right.
+          </p>
+        </header>
 
         <div class="grid services-grid">
           <article class="card service-card">
             <h3>Body Repair & Painting</h3>
             <p>
-              Full body repair, frame straightening, and factory-style paint work to bring
-              your car back to pre-accident condition.
+              Full collision repair and paint refinishing to restore your vehicle
+              to pre-accident condition.
             </p>
             <ul>
               <li>Collision and dent repair</li>
-              <li>Color-matched paint and clear coat</li>
+              <li>Color-matched paint & clear coat</li>
               <li>Scratch, scuff, and panel refinishing</li>
             </ul>
           </article>
@@ -142,178 +197,224 @@
           <article class="card service-card">
             <h3>Truck & Semi Body Repair</h3>
             <p>
-              We handle commercial vehicles, vans, and semi trucks with the space and tools
-              needed for big jobs.
+              Space, tools, and experience to handle commercial vans, box trucks,
+              and semi trucks.
             </p>
             <ul>
-              <li>Semi truck body repair</li>
-              <li>Commercial van and work truck repair</li>
-              <li>Fleet service options</li>
+              <li>Semi truck body repairs</li>
+              <li>Commercial van & fleet repair</li>
+              <li>Fast turnaround scheduling</li>
             </ul>
           </article>
 
           <article class="card service-card">
             <h3>All Kinds of Body Work</h3>
             <p>
-              Whether it’s a parking lot ding or a major collision, we make damaged vehicles
-              look right again.
+              From parking lot dings to major damage, we repair all makes and models
+              with care.
             </p>
             <ul>
-              <li>Minor dents and dings</li>
-              <li>Major collision damage</li>
-              <li>Panel replacement and alignment</li>
+              <li>Minor dents and door dings</li>
+              <li>Panel replacement & alignment</li>
+              <li>Bumper, fender, and hood repairs</li>
             </ul>
           </article>
 
           <article class="card service-card">
             <h3>Home Pickup & Delivery</h3>
             <p>
-              We can pick up your vehicle, complete repairs, and deliver it back to you,
-              fully repaired and detailed.
+              Prefer not to drive a damaged car? We can pick it up, repair it, and
+              return it to your driveway.
             </p>
             <ul>
-              <li>Pickup from your home</li>
-              <li>End-to-end repair process</li>
-              <li>Drop-off once repairs are done</li>
+              <li>Pickup from your home or work</li>
+              <li>Progress updates during repair</li>
+              <li>Drop-off once repairs are complete</li>
             </ul>
           </article>
 
           <article class="card service-card">
             <h3>New & Old Car Repairs</h3>
             <p>
-              From brand-new models to older cars you still love, we handle repairs with
-              care and attention to detail.
+              Whether it’s a new lease or a car you’ve had for years, we repair it
+              to a high standard.
             </p>
             <ul>
-              <li>Modern vehicles with advanced finishes</li>
+              <li>Modern vehicles and advanced finishes</li>
               <li>Older and classic cars</li>
-              <li>Cosmetic and structural repairs</li>
+              <li>Cosmetic and structural work</li>
             </ul>
           </article>
 
           <article class="card service-card">
             <h3>We Fix All Damaged Cars</h3>
             <p>
-              All makes, all models. If it has a body panel, we can repair it and get you
-              safely back on the road.
+              All insurance, all makes, all models. If it’s damaged, we can help
+              you get it back on the road.
             </p>
             <ul>
               <li>Insurance and out-of-pocket jobs</li>
-              <li>Quick estimates and guidance</li>
-              <li>Transparent communication throughout</li>
+              <li>Clear estimates and timelines</li>
+              <li>Honest guidance after accidents</li>
             </ul>
           </article>
         </div>
 
         <div class="section-cta">
-          <a href="#contact" class="btn btn-primary">Make an Appointment</a>
-          <a href="tel:+14089950770" class="btn btn-outline">Call to Schedule</a>
+          <a href="#contact" class="btn btn-primary">Make an appointment</a>
+          <a href="tel:+14089950770" class="btn btn-outline">Call to schedule</a>
         </div>
       </div>
     </section>
 
-    <!-- WHY CHOOSE US -->
-    <section id="why-us" class="section section-alt">
+    <section id="why-us" class="section section-soft">
       <div class="container about-grid">
         <div>
-          <h2>Why Choose Paul’s Auto Body</h2>
-          <p>
-            We’re a local shop that treats every vehicle with the same care and attention
-            we’d give to our own. From the first call to the final handoff, you’ll always
-            know what’s happening with your car.
-          </p>
+          <header class="section-header alt">
+            <h2>Why drivers choose Paul's Auto Body</h2>
+            <p class="section-intro">
+              You’re not just a ticket number. We keep you in the loop, explain your options,
+              and treat your car with respect from day one.
+            </p>
+          </header>
 
-          <p class="highlight">
-            <strong>Address:</strong> 680 N 13th St, San Jose, CA 95112, United States<br />
-            <strong>Office:</strong> <a href="tel:+14089950770">(408) 995-0770</a><br />
-            <strong>Cell:</strong> <a href="tel:+14084994368">(408) 499-4368</a><br />
-            <strong>Email:</strong>
-            <a href="mailto:Autobody741@gmail.com">Autobody741@gmail.com</a>
-          </p>
+          <dl class="info-grid">
+            <div>
+              <dt>Address</dt>
+              <dd>680 N 13th St, San Jose, CA 95112, United States</dd>
+            </div>
+            <div>
+              <dt>Office</dt>
+              <dd><a href="tel:+14089950770">(408) 995-0770</a></dd>
+            </div>
+            <div>
+              <dt>Cell</dt>
+              <dd><a href="tel:+14084994368">(408) 499-4368</a></dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:Autobody741@gmail.com">Autobody741@gmail.com</a></dd>
+            </div>
+            <div>
+              <dt>Hours</dt>
+              <dd>Weekdays, Saturday & Sunday: 24 hours</dd>
+            </div>
+          </dl>
         </div>
 
-        <aside class="about-card">
+        <aside class="card about-card">
           <h3>What sets us apart</h3>
           <ul class="feature-list">
             <li>
-              <strong>Expert engineers & technicians</strong><br />
-              A skilled team with years of hands-on collision repair experience.
+              <strong>Expert engineers</strong><br />
+              A seasoned team focused on precise repairs and clean, factory-style finishes.
             </li>
             <li>
-              <strong>Proven skills & craftsmanship</strong><br />
-              Clean lines, tight panel gaps, and smooth finishes that last.
+              <strong>Proven skills</strong><br />
+              Years of experience repairing everything from daily drivers to work trucks.
             </li>
             <li>
               <strong>Guaranteed service</strong><br />
-              We stand behind our work and aim to exceed expectations on every job.
+              We stand behind our work and take the time to get details right.
             </li>
             <li>
               <strong>Trusted work</strong><br />
-              Long-term customers, word-of-mouth referrals, and consistent quality.
+              Long-term customers, referrals, and consistent quality repairs.
             </li>
           </ul>
-          <p class="small">
-            All kinds of insurance accepted. We’ll help you through the claim process.
-          </p>
         </aside>
       </div>
     </section>
 
-    <!-- HOW IT WORKS -->
-    <section class="section">
+    <section id="process" class="section section-light">
       <div class="container">
-        <div class="section-header">
-          <h2>Simple, stress-free repair process</h2>
+        <header class="section-header">
+          <h2>How the repair process works</h2>
           <p class="section-intro">
-            We keep things clear and easy from the moment you contact us to the day you pick
-            up your car.
+            Simple, clear steps from your first call to the day you pick up your car.
           </p>
-        </div>
+        </header>
 
         <div class="grid steps-grid">
           <article class="step-card">
-            <span class="step-badge">01</span>
-            <h3>Call or book an appointment</h3>
+            <span class="step-number">1</span>
+            <h3>Call us or request a callback</h3>
             <p>
-              Reach us by phone or send a quick request online. Share a few details and photos
-              if you have them.
+              Tell us what happened, share photos if you have them, and we’ll outline
+              the next steps and timing.
             </p>
           </article>
           <article class="step-card">
-            <span class="step-badge">02</span>
-            <h3>We inspect and provide an estimate</h3>
+            <span class="step-number">2</span>
+            <h3>We inspect and create an estimate</h3>
             <p>
-              Bring your vehicle in or schedule pickup. We’ll walk you through repair options
-              and timing.
+              Bring your car in or schedule pickup. We’ll walk through the estimate
+              and work with your insurance.
             </p>
           </article>
           <article class="step-card">
-            <span class="step-badge">03</span>
-            <h3>We repair, paint, and quality-check</h3>
+            <span class="step-number">3</span>
+            <h3>Repairs, paint, and quality check</h3>
             <p>
-              Our team completes bodywork and paint, then inspects every detail before delivery.
+              Our team completes body repair, paint, and alignment, then inspects
+              everything before release.
             </p>
           </article>
           <article class="step-card">
-            <span class="step-badge">04</span>
-            <h3>Pick up or home delivery</h3>
+            <span class="step-number">4</span>
+            <h3>Pickup or home delivery</h3>
             <p>
-              Drive away in a repaired, cleaned vehicle, or have it delivered back to your home.
+              Pick up your car at the shop or have it delivered to your home, fully
+              repaired and cleaned.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- REVIEWS -->
-    <section id="reviews" class="section section-alt">
+    <section class="section section-gallery">
       <div class="container">
-        <div class="section-header">
+        <header class="section-header">
+          <h2>Before & after style results</h2>
+          <p class="section-intro">
+            A glimpse at the kind of work we do every day at Paul’s Auto Body.
+          </p>
+        </header>
+
+        <div class="grid gallery-grid">
+          <figure class="gallery-item">
+            <img
+              src="https://images.pexels.com/photos/3807310/pexels-photo-3807310.jpeg?auto=compress&cs=tinysrgb&w=900"
+              alt="Technician polishing the front of a white car in a workshop"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="https://images.pexels.com/photos/6200707/pexels-photo-6200707.jpeg?auto=compress&cs=tinysrgb&w=900"
+              alt="Freshly painted red car in an auto body shop"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="https://images.pexels.com/photos/3807755/pexels-photo-3807755.jpeg?auto=compress&cs=tinysrgb&w=900"
+              alt="Mechanic checking the front of a black car"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="section section-soft">
+      <div class="container">
+        <header class="section-header alt">
           <h2>What our customers say</h2>
           <p class="section-intro">
-            Drivers across San Jose trust Paul’s Auto Body with their vehicles after an accident.
+            Drivers across San Jose trust Paul's Auto Body after accidents, big and small.
           </p>
-        </div>
+        </header>
 
         <div class="reviews-summary">
           <div class="reviews-stat">
@@ -337,35 +438,35 @@
         <div class="grid reviews-grid">
           <article class="card review-card">
             <p class="review-text">
-              “Absolutely thrilled with the exceptional service provided by Paul’s Auto Body
-              Services! From the moment I walked in, I was greeted with professionalism and
-              genuine care for my car. They went above and beyond and delivered outstanding
-              results.”
+              “Absolutely thrilled with the exceptional service provided by Paul's Auto Body!
+              From the moment I walked in, I was greeted with professionalism and genuine care.
+              They went above and beyond and delivered outstanding results.”
             </p>
-            <p class="review-author">— Howard Chavez, Entrepreneur</p>
+            <p class="review-author">Howard Chavez · Entrepreneur</p>
           </article>
 
           <article class="card review-card">
             <p class="review-text">
-              “I can’t thank Paul’s Auto Body Services enough for their incredible work on my
-              vehicle. They handled everything after an accident and made sure every detail
-              was perfect. I won’t trust anyone else with my car.”
+              “I can't thank Paul's Auto Body enough for their incredible work on my vehicle.
+              They handled everything after an accident and made sure every detail was perfect.
+              I won't trust anyone else with my car.”
             </p>
-            <p class="review-author">— Lucas Elliot, Designer</p>
+            <p class="review-author">Lucas Elliot · Designer</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT / REQUEST CALLBACK -->
-    <section id="contact" class="section">
+    <section id="contact" class="section section-light">
       <div class="container contact-grid">
         <div>
-          <h2>Request a call back</h2>
-          <p class="section-intro">
-            Tell us what happened and how we can help. We’ll call you back to confirm details,
-            timing, and next steps.
-          </p>
+          <header class="section-header">
+            <h2>Request a call back</h2>
+            <p class="section-intro">
+              Share a few details about your car and the damage. We’ll call you to confirm
+              details, timing, and next steps.
+            </p>
+          </header>
 
           <form
             class="contact-form"
@@ -375,30 +476,30 @@
           >
             <input type="hidden" name="_subject" value="New Appointment Request - Paul's Auto Body" />
 
-            <p class="small required-note">Fields marked with * are required</p>
+            <p class="required-note">Fields marked with * are required</p>
 
             <div class="form-row">
-              <label for="name">Name*</label>
-              <input id="name" name="name" type="text" required />
+              <label for="name">Name *</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
             </div>
 
             <div class="form-row">
-              <label for="phone">Phone Number*</label>
-              <input id="phone" name="phone" type="tel" required />
+              <label for="phone">Phone Number *</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required />
             </div>
 
             <div class="form-row">
               <label for="email">Email</label>
-              <input id="email" name="email" type="email" />
+              <input id="email" name="email" type="email" autocomplete="email" />
             </div>
 
             <div class="form-row">
-              <label for="description">Description of damage*</label>
+              <label for="description">Description *</label>
               <textarea
                 id="description"
                 name="description"
                 rows="4"
-                placeholder="Share what happened, vehicle make/model, and insurance info if you have it."
+                placeholder="What happened? Vehicle make, model, year, and insurance if you have it."
                 required
               ></textarea>
             </div>
@@ -409,36 +510,32 @@
             </div>
 
             <button type="submit" class="btn btn-primary full-width">
-              Book an Appointment
+              Book an appointment
             </button>
             <p class="small">
-              Need urgent help? Call our office at
+              For urgent help, call the office at
               <a href="tel:+14089950770">(408) 995-0770</a> or cell at
               <a href="tel:+14084994368">(408) 499-4368</a>.
             </p>
           </form>
         </div>
 
-        <aside class="contact-info">
-          <h3>Contact information</h3>
+        <aside class="card contact-info">
+          <h3>Contact & shop details</h3>
           <p>
-            <strong>Paul’s Auto Body Services</strong><br />
+            <strong>Paul's Auto Body Services</strong><br />
             680 N 13th St<br />
             San Jose, CA 95112<br />
             United States
           </p>
 
           <p>
-            <strong>Office:</strong>
-            <a href="tel:+14089950770">(408) 995-0770</a><br />
-            <strong>Cell:</strong>
-            <a href="tel:+14084994368">(408) 499-4368</a><br />
-            <strong>Email:</strong>
-            <a href="mailto:Autobody741@gmail.com">Autobody741@gmail.com</a>
+            Office: <a href="tel:+14089950770">(408) 995-0770</a><br />
+            Cell: <a href="tel:+14084994368">(408) 499-4368</a><br />
+            Email: <a href="mailto:Autobody741@gmail.com">Autobody741@gmail.com</a>
           </p>
 
           <p>
-            <strong>Hours:</strong><br />
             Week Days: 24 hours<br />
             Saturday: 24 hours<br />
             Sunday: 24 hours
@@ -446,7 +543,7 @@
 
           <div class="map-wrapper">
             <iframe
-              title="Paul’s Auto Body Location"
+              title="Paul's Auto Body Location"
               src="https://www.google.com/maps?q=680+N+13th+St,+San+Jose,+CA+95112&output=embed"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
@@ -456,50 +553,45 @@
       </div>
     </section>
 
-    <!-- QUICK LINKS / SERVICES & FOOTER -->
-    <section class="section section-alt footer-top">
+    <section class="section section-soft footer-top">
       <div class="container footer-top-grid">
         <div>
-          <h3>Core Services</h3>
+          <h3>Core services</h3>
           <ul class="footer-list">
-            <li>Truck Body Repair</li>
-            <li>Body Repair & Painting</li>
-            <li>Paint & Scratch Service</li>
-            <li>Jump Start & Support</li>
-            <li>Auto Maintenance & Diagnosis</li>
-            <li>Tires & Wheel Balancing</li>
-            <li>Towing Service</li>
+            <li>Truck body repair</li>
+            <li>Body repair & painting</li>
+            <li>Paint & scratch services</li>
+            <li>Auto maintenance & diagnosis</li>
+            <li>Tires & wheel balancing</li>
+            <li>Towing service</li>
+            <li>Jump start support</li>
           </ul>
         </div>
         <div>
-          <h3>Need help right now?</h3>
+          <h3>Emergency calls 24/7</h3>
           <p class="small">
-            <strong>EMERGENCY CALL 24/7</strong><br />
             Office: <a href="tel:+14089950770">(408) 995-0770</a><br />
             Cell: <a href="tel:+14084994368">(408) 499-4368</a>
           </p>
           <a href="#contact" class="btn btn-primary">Book an appointment today</a>
         </div>
         <div>
-          <h3>Shop Hours</h3>
+          <h3>Shop hours</h3>
           <p class="small">
             Mon – Fri: 9:00 AM – 5:00 PM<br />
-            24/7 phone support for emergencies
+            Phones monitored 24/7 for emergencies
           </p>
         </div>
       </div>
     </section>
-
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>
-        © <span id="year"></span> Paul’s Auto Body. All rights reserved.
+        © <span id="year"></span> Paul's Auto Body. All rights reserved.
       </p>
-      <p class="small">
-        Powered by Paul’s Auto Body
-      </p>
+      <p class="small">Powered by Paul's Auto Body</p>
     </div>
   </footer>
 
