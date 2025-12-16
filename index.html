@@ -31,18 +31,15 @@
       --color-gray-800: #1e293b;
       --color-gray-900: #0f172a;
     }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     html {
       scroll-behavior: smooth;
       overflow-x: hidden;
     }
-
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       color: var(--color-gray-800);
@@ -50,12 +47,10 @@
       line-height: 1.7;
       overflow-x: hidden;
     }
-
     img {
       max-width: 100%;
       display: block;
     }
-
     .animated-bg {
       position: fixed;
       top: 0;
@@ -68,13 +63,11 @@
       animation: gradientShift 15s ease infinite;
       opacity: 0.03;
     }
-
     @keyframes gradientShift {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-
     .top-alert {
       background: var(--gradient-accent);
       color: white;
@@ -85,7 +78,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .top-alert::before {
       content: '';
       position: absolute;
@@ -96,22 +88,18 @@
       background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
       animation: shimmer 3s infinite;
     }
-
     @keyframes shimmer {
       0% { left: -100%; }
       100% { left: 100%; }
     }
-
     .top-alert i {
       margin-right: 8px;
       animation: pulse 2s infinite;
     }
-
     @keyframes pulse {
       0%, 100% { opacity: 1; }
       50% { opacity: 0.6; }
     }
-
     .header {
       position: sticky;
       top: 0;
@@ -122,11 +110,9 @@
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
       transition: all 0.3s ease;
     }
-
     .header.scrolled {
       box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
     }
-
     .nav-container {
       max-width: 1400px;
       margin: 0 auto;
@@ -136,7 +122,6 @@
       justify-content: space-between;
       gap: 40px;
     }
-
     .logo {
       display: flex;
       align-items: center;
@@ -144,11 +129,9 @@
       text-decoration: none;
       transition: transform 0.3s ease;
     }
-
     .logo:hover {
       transform: translateY(-2px);
     }
-
     .logo-icon {
       width: 48px;
       height: 48px;
@@ -164,7 +147,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .logo-icon::before {
       content: '';
       position: absolute;
@@ -176,18 +158,15 @@
       transform: rotate(45deg);
       animation: logoShine 3s infinite;
     }
-
     @keyframes logoShine {
       0% { transform: translateX(-100%) rotate(45deg); }
       100% { transform: translateX(100%) rotate(45deg); }
     }
-
     .logo-text {
       display: flex;
       flex-direction: column;
       gap: 2px;
     }
-
     .logo-title {
       font-family: 'Sora', sans-serif;
       font-size: 20px;
@@ -195,7 +174,6 @@
       color: var(--color-dark);
       letter-spacing: -0.5px;
     }
-
     .logo-subtitle {
       font-size: 12px;
       color: var(--color-gray-500);
@@ -203,13 +181,11 @@
       text-transform: uppercase;
       letter-spacing: 1px;
     }
-
     .nav-links {
       display: flex;
       gap: 32px;
       align-items: center;
     }
-
     .nav-links a {
       text-decoration: none;
       color: var(--color-gray-700);
@@ -218,7 +194,6 @@
       position: relative;
       transition: color 0.3s ease;
     }
-
     .nav-links a::after {
       content: '';
       position: absolute;
@@ -230,21 +205,17 @@
       transition: width 0.3s ease;
       border-radius: 2px;
     }
-
     .nav-links a:hover {
       color: var(--color-primary);
     }
-
     .nav-links a:hover::after {
       width: 100%;
     }
-
     .header-actions {
       display: flex;
       gap: 12px;
       align-items: center;
     }
-
     .btn {
       padding: 12px 24px;
       border-radius: 12px;
@@ -259,39 +230,32 @@
       cursor: pointer;
       white-space: nowrap;
     }
-
     .btn-primary {
       background: var(--gradient-primary);
       color: white;
       box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
     }
-
     .btn-primary:hover {
       transform: translateY(-2px);
       box-shadow: 0 12px 32px rgba(59, 130, 246, 0.5);
     }
-
     .btn-ghost {
       background: transparent;
       color: var(--color-gray-700);
       border: 2px solid var(--color-gray-200);
     }
-
     .btn-ghost:hover {
       background: var(--color-gray-100);
       border-color: var(--color-gray-300);
     }
-
     .btn-white {
       background: white;
       color: var(--color-primary);
     }
-
     .btn-white:hover {
       transform: translateY(-2px);
       box-shadow: 0 12px 32px rgba(255, 255, 255, 0.3);
     }
-
     .mobile-menu-btn {
       display: none;
       background: none;
@@ -300,14 +264,12 @@
       cursor: pointer;
       color: var(--color-dark);
     }
-
     .hero {
       position: relative;
       padding: 120px 40px 100px;
       overflow: hidden;
       background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     }
-
     .hero::before {
       content: '';
       position: absolute;
@@ -320,7 +282,6 @@
         radial-gradient(circle at 80% 70%, rgba(251, 191, 36, 0.15), transparent 50%);
       z-index: 0;
     }
-
     .hero-container {
       max-width: 1400px;
       margin: 0 auto;
@@ -331,7 +292,6 @@
       position: relative;
       z-index: 1;
     }
-
     .hero-content h1 {
       font-family: 'Sora', sans-serif;
       font-size: clamp(42px, 6vw, 68px);
@@ -341,28 +301,24 @@
       color: var(--color-dark);
       letter-spacing: -2px;
     }
-
     .hero-content h1 .gradient-text {
       background: var(--gradient-primary);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
     .hero-description {
       font-size: 20px;
       color: var(--color-gray-600);
       margin-bottom: 32px;
       line-height: 1.7;
     }
-
     .hero-actions {
       display: flex;
       gap: 16px;
       margin-bottom: 48px;
       flex-wrap: wrap;
     }
-
     .hero-stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -370,11 +326,9 @@
       padding-top: 32px;
       border-top: 1px solid var(--color-gray-200);
     }
-
     .stat-item {
       text-align: center;
     }
-
     .stat-number {
       font-size: 32px;
       font-weight: 800;
@@ -385,7 +339,6 @@
       display: block;
       margin-bottom: 4px;
     }
-
     .stat-label {
       font-size: 13px;
       color: var(--color-gray-500);
@@ -393,17 +346,14 @@
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
-
     .hero-image {
       position: relative;
       animation: float 6s ease-in-out infinite;
     }
-
     @keyframes float {
       0%, 100% { transform: translateY(0px); }
       50% { transform: translateY(-20px); }
     }
-
     .hero-card {
       background: white;
       border-radius: 24px;
@@ -411,19 +361,16 @@
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
       border: 1px solid var(--color-gray-200);
     }
-
     .hero-card h3 {
       font-size: 22px;
       margin-bottom: 16px;
       color: var(--color-dark);
     }
-
     .hero-form {
       display: flex;
       flex-direction: column;
       gap: 12px;
     }
-
     .form-input {
       padding: 16px 20px;
       border: 2px solid var(--color-gray-200);
@@ -434,46 +381,39 @@
       background: var(--color-gray-50);
       width: 100%;
     }
-
     .form-input:focus {
       outline: none;
       border-color: var(--color-primary);
       background: white;
       box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
     }
-
     /* Image Carousel Section */
     .image-carousel-section {
       padding: 0;
       background: white;
       overflow: hidden;
     }
-
     .carousel-container {
       position: relative;
       width: 100%;
       height: 500px;
       overflow: hidden;
     }
-
     .carousel-track {
       display: flex;
       transition: transform 0.5s ease;
       height: 100%;
     }
-
     .carousel-slide {
       min-width: 100%;
       height: 100%;
       position: relative;
     }
-
     .carousel-slide img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-
     .carousel-overlay {
       position: absolute;
       inset: 0;
@@ -483,18 +423,15 @@
       padding: 60px;
       color: white;
     }
-
     .carousel-content h3 {
       font-size: 36px;
       margin-bottom: 12px;
       font-weight: 700;
     }
-
     .carousel-content p {
       font-size: 18px;
       opacity: 0.9;
     }
-
     .carousel-btn {
       position: absolute;
       top: 50%;
@@ -513,20 +450,16 @@
       justify-content: center;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     }
-
     .carousel-btn:hover {
       background: white;
       transform: translateY(-50%) scale(1.1);
     }
-
     .carousel-btn-prev {
       left: 40px;
     }
-
     .carousel-btn-next {
       right: 40px;
     }
-
     .carousel-indicators {
       position: absolute;
       bottom: 30px;
@@ -536,7 +469,6 @@
       gap: 12px;
       z-index: 10;
     }
-
     .carousel-indicator {
       width: 12px;
       height: 12px;
@@ -546,38 +478,32 @@
       cursor: pointer;
       transition: all 0.3s ease;
     }
-
     .carousel-indicator.active {
       background: white;
       width: 32px;
       border-radius: 6px;
     }
-
     /* Trust Badges */
     .trust-badges {
       padding: 80px 40px;
       background: var(--color-gray-50);
     }
-
     .container {
       max-width: 1400px;
       margin: 0 auto;
     }
-
     .badges-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 40px;
       text-align: center;
     }
-
     .badge-item {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 16px;
     }
-
     .badge-icon {
       width: 80px;
       height: 80px;
@@ -590,28 +516,23 @@
       color: white;
       box-shadow: 0 12px 40px rgba(102, 126, 234, 0.3);
     }
-
     .badge-item h3 {
       font-size: 18px;
       color: var(--color-dark);
     }
-
     .badge-item p {
       color: var(--color-gray-600);
       font-size: 14px;
     }
-
     /* Services Section */
     .services {
       padding: 100px 40px;
       background: white;
     }
-
     .section-header {
       text-align: center;
       margin-bottom: 64px;
     }
-
     .section-label {
       display: inline-block;
       padding: 8px 20px;
@@ -624,7 +545,6 @@
       letter-spacing: 1px;
       margin-bottom: 16px;
     }
-
     .section-title {
       font-family: 'Sora', sans-serif;
       font-size: clamp(32px, 5vw, 48px);
@@ -633,20 +553,17 @@
       color: var(--color-dark);
       letter-spacing: -1px;
     }
-
     .section-description {
       font-size: 18px;
       color: var(--color-gray-600);
       max-width: 700px;
       margin: 0 auto;
     }
-
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 32px;
     }
-
     .service-card {
       background: white;
       border: 2px solid var(--color-gray-100);
@@ -656,7 +573,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .service-card::before {
       content: '';
       position: absolute;
@@ -669,22 +585,18 @@
       transition: opacity 0.4s ease;
       z-index: 0;
     }
-
     .service-card:hover::before {
       opacity: 0.05;
     }
-
     .service-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
       border-color: var(--color-primary);
     }
-
     .service-card > * {
       position: relative;
       z-index: 1;
     }
-
     .service-icon {
       width: 64px;
       height: 64px;
@@ -698,25 +610,21 @@
       color: white;
       box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
     }
-
     .service-card h3 {
       font-size: 22px;
       margin-bottom: 12px;
       color: var(--color-dark);
       font-weight: 700;
     }
-
     .service-card p {
       color: var(--color-gray-600);
       margin-bottom: 20px;
       line-height: 1.7;
     }
-
     .service-card ul {
       list-style: none;
       padding: 0;
     }
-
     .service-card li {
       padding: 8px 0;
       color: var(--color-gray-600);
@@ -725,26 +633,22 @@
       gap: 8px;
       font-size: 15px;
     }
-
     .service-card li::before {
       content: '✓';
       color: var(--color-primary);
       font-weight: 700;
     }
-
     /* Before After Section */
     .before-after {
       padding: 100px 40px;
       background: var(--color-gray-50);
     }
-
     .before-after-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 40px;
       margin-top: 64px;
     }
-
     .before-after-card {
       background: white;
       border-radius: 24px;
@@ -752,17 +656,14 @@
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
     }
-
     .before-after-card:hover {
       transform: translateY(-8px);
     }
-
     .before-after-images {
       display: grid;
       grid-template-columns: 1fr 1fr;
       position: relative;
     }
-
     .before-after-images::after {
       content: 'VS';
       position: absolute;
@@ -782,18 +683,15 @@
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
       z-index: 10;
     }
-
     .ba-image {
       position: relative;
       aspect-ratio: 1;
     }
-
     .ba-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-
     .ba-label {
       position: absolute;
       top: 16px;
@@ -807,40 +705,33 @@
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
-
     .before-after-info {
       padding: 24px;
     }
-
     .before-after-info h3 {
       font-size: 20px;
       margin-bottom: 8px;
       color: var(--color-dark);
     }
-
     .before-after-info p {
       color: var(--color-gray-600);
       font-size: 15px;
     }
-
     /* Process Section */
     .process {
       padding: 100px 40px;
       background: white;
     }
-
     .process-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 40px;
       margin-top: 64px;
     }
-
     .process-step {
       text-align: center;
       position: relative;
     }
-
     .process-step::after {
       content: '→';
       position: absolute;
@@ -850,11 +741,9 @@
       color: var(--color-gray-300);
       font-weight: 300;
     }
-
     .process-step:last-child::after {
       display: none;
     }
-
     .step-number {
       width: 80px;
       height: 80px;
@@ -869,18 +758,15 @@
       color: white;
       box-shadow: 0 12px 40px rgba(59, 130, 246, 0.4);
     }
-
     .process-step h3 {
       font-size: 20px;
       margin-bottom: 12px;
       color: var(--color-dark);
     }
-
     .process-step p {
       color: var(--color-gray-600);
       line-height: 1.7;
     }
-
     /* Testimonials Carousel */
     .testimonials {
       padding: 100px 40px;
@@ -889,7 +775,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .testimonials::before {
       content: '';
       position: absolute;
@@ -900,23 +785,19 @@
       background: radial-gradient(circle, rgba(102, 126, 234, 0.2), transparent);
       border-radius: 50%;
     }
-
     .testimonials-carousel {
       position: relative;
       max-width: 900px;
       margin: 64px auto 0;
     }
-
     .testimonial-track {
       display: flex;
       transition: transform 0.5s ease;
     }
-
     .testimonial-slide {
       min-width: 100%;
       padding: 0 20px;
     }
-
     .testimonial-card {
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(20px);
@@ -925,27 +806,23 @@
       padding: 48px;
       text-align: center;
     }
-
     .testimonial-stars {
       font-size: 24px;
       color: #fbbf24;
       margin-bottom: 24px;
     }
-
     .testimonial-text {
       font-size: 20px;
       line-height: 1.8;
       margin-bottom: 32px;
       font-style: italic;
     }
-
     .testimonial-author {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 16px;
     }
-
     .author-avatar {
       width: 60px;
       height: 60px;
@@ -957,24 +834,20 @@
       font-size: 24px;
       font-weight: 700;
     }
-
     .author-info h4 {
       font-size: 18px;
       margin-bottom: 4px;
     }
-
     .author-info p {
       font-size: 14px;
       opacity: 0.7;
     }
-
     .testimonial-controls {
       display: flex;
       justify-content: center;
       gap: 16px;
       margin-top: 40px;
     }
-
     .testimonial-btn {
       width: 50px;
       height: 50px;
@@ -989,25 +862,21 @@
       align-items: center;
       justify-content: center;
     }
-
     .testimonial-btn:hover {
       background: rgba(255, 255, 255, 0.3);
       transform: scale(1.1);
     }
-
     /* Gallery Section */
     .gallery {
       padding: 100px 40px;
       background: white;
     }
-
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 24px;
       margin-top: 48px;
     }
-
     .gallery-item {
       border-radius: 20px;
       overflow: hidden;
@@ -1016,17 +885,14 @@
       cursor: pointer;
       transition: transform 0.3s ease;
     }
-
     .gallery-item:hover {
       transform: scale(1.05);
     }
-
     .gallery-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-
     .gallery-item::after {
       content: '';
       position: absolute;
@@ -1035,17 +901,14 @@
       opacity: 0;
       transition: opacity 0.3s ease;
     }
-
     .gallery-item:hover::after {
       opacity: 1;
     }
-
     /* FAQ Section */
     .faq {
       padding: 100px 40px;
       background: var(--color-gray-50);
     }
-
     .faq-grid {
       display: grid;
       gap: 16px;
@@ -1054,7 +917,6 @@
       margin-left: auto;
       margin-right: auto;
     }
-
     .faq-item {
       background: white;
       border: 2px solid var(--color-gray-200);
@@ -1062,11 +924,9 @@
       overflow: hidden;
       transition: all 0.3s ease;
     }
-
     .faq-item:hover {
       border-color: var(--color-primary);
     }
-
     .faq-question {
       width: 100%;
       padding: 24px 28px;
@@ -1082,46 +942,38 @@
       align-items: center;
       gap: 20px;
     }
-
     .faq-icon {
       font-size: 24px;
       color: var(--color-primary);
       transition: transform 0.3s ease;
     }
-
     .faq-item.active .faq-icon {
       transform: rotate(180deg);
     }
-
     .faq-answer {
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.3s ease;
     }
-
     .faq-item.active .faq-answer {
       max-height: 300px;
     }
-
     .faq-answer-content {
       padding: 0 28px 24px;
       color: var(--color-gray-600);
       line-height: 1.7;
     }
-
     /* Insurance Partners */
     .insurance {
       padding: 80px 40px;
       background: white;
       text-align: center;
     }
-
     .insurance h2 {
       font-size: 32px;
       margin-bottom: 48px;
       color: var(--color-dark);
     }
-
     .insurance-logos {
       display: flex;
       justify-content: center;
@@ -1130,13 +982,11 @@
       flex-wrap: wrap;
       opacity: 0.6;
     }
-
     .insurance-logo {
       font-size: 24px;
       font-weight: 700;
       color: var(--color-gray-400);
     }
-
     /* CTA Section */
     .cta {
       padding: 100px 40px;
@@ -1146,7 +996,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .cta::before {
       content: '';
       position: absolute;
@@ -1157,17 +1006,14 @@
       background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
       animation: rotate 20s linear infinite;
     }
-
     @keyframes rotate {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
-
     .cta-content {
       position: relative;
       z-index: 1;
     }
-
     .cta h2 {
       font-family: 'Sora', sans-serif;
       font-size: clamp(32px, 5vw, 48px);
@@ -1175,62 +1021,52 @@
       margin-bottom: 24px;
       letter-spacing: -1px;
     }
-
     .cta p {
       font-size: 20px;
       margin-bottom: 40px;
       opacity: 0.95;
     }
-
     .cta-actions {
       display: flex;
       gap: 16px;
       justify-content: center;
       flex-wrap: wrap;
     }
-
     /* Contact Section */
     .contact {
       padding: 100px 40px;
       background: white;
     }
-
     .contact-grid {
       display: grid;
       grid-template-columns: 1.2fr 1fr;
       gap: 60px;
       margin-top: 64px;
     }
-
     .contact-form {
       background: var(--color-gray-50);
       padding: 48px;
       border-radius: 24px;
       border: 2px solid var(--color-gray-200);
     }
-
     .form-group {
       margin-bottom: 24px;
     }
-
     .form-label {
       display: block;
       margin-bottom: 8px;
       font-weight: 600;
       color: var(--color-dark);
     }
-
     textarea.form-input {
       min-height: 120px;
       resize: vertical;
     }
-
     .contact-info {
       display: flex;
       flex-direction: column;
       gap: 32px;
     }
-
     .info-card {
       background: var(--gradient-primary);
       color: white;
@@ -1238,7 +1074,6 @@
       border-radius: 20px;
       box-shadow: 0 20px 60px rgba(59, 130, 246, 0.3);
     }
-
     .info-card h3 {
       font-size: 24px;
       margin-bottom: 20px;
@@ -1246,7 +1081,6 @@
       align-items: center;
       gap: 12px;
     }
-
     .info-card p {
       margin-bottom: 12px;
       display: flex;
@@ -1254,37 +1088,31 @@
       gap: 12px;
       font-size: 16px;
     }
-
     .info-card a {
       color: white;
       text-decoration: none;
       transition: opacity 0.3s ease;
     }
-
     .info-card a:hover {
       opacity: 0.8;
     }
-
     .map-container {
       border-radius: 20px;
       overflow: hidden;
       height: 300px;
       border: 2px solid var(--color-gray-200);
     }
-
     .map-container iframe {
       width: 100%;
       height: 100%;
       border: none;
     }
-
     /* Footer */
     .footer {
       background: var(--color-dark);
       color: var(--color-gray-400);
       padding: 80px 40px 40px;
     }
-
     .footer-grid {
       max-width: 1400px;
       margin: 0 auto;
@@ -1293,23 +1121,19 @@
       gap: 60px;
       margin-bottom: 60px;
     }
-
     .footer-brand h3 {
       color: white;
       font-size: 24px;
       margin-bottom: 16px;
     }
-
     .footer-brand p {
       line-height: 1.7;
       margin-bottom: 24px;
     }
-
     .social-links {
       display: flex;
       gap: 12px;
     }
-
     .social-link {
       width: 40px;
       height: 40px;
@@ -1323,37 +1147,30 @@
       transition: all 0.3s ease;
       font-size: 18px;
     }
-
     .social-link:hover {
       background: var(--gradient-primary);
       transform: translateY(-2px);
     }
-
     .footer-col h4 {
       color: white;
       font-size: 16px;
       margin-bottom: 20px;
       font-weight: 600;
     }
-
     .footer-col ul {
       list-style: none;
     }
-
     .footer-col li {
       margin-bottom: 12px;
     }
-
     .footer-col a {
       color: var(--color-gray-400);
       text-decoration: none;
       transition: color 0.3s ease;
     }
-
     .footer-col a:hover {
       color: white;
     }
-
     .footer-bottom {
       max-width: 1400px;
       margin: 0 auto;
@@ -1362,47 +1179,37 @@
       text-align: center;
       font-size: 14px;
     }
-
     /* Responsive */
     @media (max-width: 1024px) {
       .nav-links {
         display: none;
       }
-
       .mobile-menu-btn {
         display: block;
       }
-
       .hero-container {
         grid-template-columns: 1fr;
       }
-
       .contact-grid {
         grid-template-columns: 1fr;
       }
-
       .footer-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-
       .process-step::after {
         display: none;
       }
     }
-
     @media (max-width: 768px) {
       .nav-container {
         padding: 16px 20px;
       }
-
       .hero {
         padding: 80px 20px 60px;
       }
-
       .hero-stats {
         grid-template-columns: 1fr;
       }
-
       .services,
       .process,
       .gallery,
@@ -1413,38 +1220,30 @@
       .faq {
         padding: 60px 20px;
       }
-
       .footer-grid {
         grid-template-columns: 1fr;
         gap: 40px;
       }
-
       .btn-ghost.hide-mobile {
         display: none;
       }
-
       .carousel-btn {
         width: 40px;
         height: 40px;
         font-size: 18px;
       }
-
       .carousel-btn-prev {
         left: 20px;
       }
-
       .carousel-btn-next {
         right: 20px;
       }
-
       .carousel-overlay {
         padding: 30px;
       }
-
       .carousel-content h3 {
         font-size: 24px;
       }
-
       .carousel-content p {
         font-size: 14px;
       }
@@ -1453,12 +1252,10 @@
 </head>
 <body>
   <div class="animated-bg"></div>
-
   <div class="top-alert">
     <i class="ri-phone-line"></i>
     <strong>24/7 Emergency Service</strong> - Call Now: (408) 995-0770
   </div>
-
   <header class="header" id="header">
     <nav class="nav-container">
       <a href="#" class="logo">
@@ -1468,7 +1265,6 @@
           <div class="logo-subtitle">Since 1995</div>
         </div>
       </a>
-
       <div class="nav-links">
         <a href="#services">Services</a>
         <a href="#process">Process</a>
@@ -1476,7 +1272,6 @@
         <a href="#testimonials">Reviews</a>
         <a href="#contact">Contact</a>
       </div>
-
       <div class="header-actions">
         <a href="tel:+14089950770" class="btn btn-ghost hide-mobile">
           <i class="ri-phone-line"></i>
@@ -1492,7 +1287,6 @@
       </div>
     </nav>
   </header>
-
   <section class="hero">
     <div class="hero-container">
       <div class="hero-content">
@@ -1527,7 +1321,6 @@
           </div>
         </div>
       </div>
-
       <div class="hero-image">
         <div class="hero-card">
           <h3>🚗 Get a Free Estimate</h3>
@@ -1545,34 +1338,33 @@
       </div>
     </div>
   </section>
-
   <section class="image-carousel-section">
     <div class="carousel-container">
       <div class="carousel-track" id="mainCarousel">
         <div class="carousel-slide">
-          <img src="https://images.pexels.com/photos/3806269/pexels-photo-3806269.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Professional auto painting">
+          <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1600&q=80" alt="Professional auto body shop">
           <div class="carousel-overlay">
             <div class="carousel-content">
-              <h3>Professional Auto Painting</h3>
-              <p>State-of-the-art paint booth for factory-quality finishes</p>
+              <h3>State-of-the-Art Facility</h3>
+              <p>Modern equipment and technology for precision repairs</p>
             </div>
           </div>
         </div>
         <div class="carousel-slide">
-          <img src="https://images.pexels.com/photos/4489734/pexels-photo-4489734.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Expert technicians">
+          <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1600&q=80" alt="Car painting booth">
           <div class="carousel-overlay">
             <div class="carousel-content">
-              <h3>Expert Technicians</h3>
-              <p>Certified professionals with decades of combined experience</p>
+              <h3>Professional Paint Services</h3>
+              <p>Factory-quality finishes in our climate-controlled booth</p>
             </div>
           </div>
         </div>
         <div class="carousel-slide">
-          <img src="https://images.pexels.com/photos/13065690/pexels-photo-13065690.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Quality inspection">
+          <img src="https://images.unsplash.com/photo-1632823469770-48bbbd810938?w=1600&q=80" alt="Expert collision repair">
           <div class="carousel-overlay">
             <div class="carousel-content">
-              <h3>Quality Inspection</h3>
-              <p>Every vehicle undergoes rigorous quality checks before delivery</p>
+              <h3>Expert Collision Repair</h3>
+              <p>Certified technicians restoring your vehicle to perfection</p>
             </div>
           </div>
         </div>
@@ -1590,7 +1382,6 @@
       </div>
     </div>
   </section>
-
   <section class="trust-badges">
     <div class="container">
       <div class="badges-grid">
@@ -1625,7 +1416,6 @@
       </div>
     </div>
   </section>
-
   <section class="services" id="services">
     <div class="container">
       <div class="section-header">
@@ -1635,7 +1425,6 @@
           From minor dents to major collision repair, we handle everything with expert precision and factory-quality results.
         </p>
       </div>
-
       <div class="services-grid">
         <div class="service-card">
           <div class="service-icon">
@@ -1650,7 +1439,6 @@
             <li>Safety system inspection</li>
           </ul>
         </div>
-
         <div class="service-card">
           <div class="service-icon">
             <i class="ri-paint-brush-line"></i>
@@ -1664,7 +1452,6 @@
             <li>Scratch & scuff removal</li>
           </ul>
         </div>
-
         <div class="service-card">
           <div class="service-icon">
             <i class="ri-truck-line"></i>
@@ -1678,7 +1465,6 @@
             <li>Flexible scheduling options</li>
           </ul>
         </div>
-
         <div class="service-card">
           <div class="service-icon">
             <i class="ri-tools-line"></i>
@@ -1692,7 +1478,6 @@
             <li>Minor collision fixes</li>
           </ul>
         </div>
-
         <div class="service-card">
           <div class="service-icon">
             <i class="ri-home-4-line"></i>
@@ -1706,7 +1491,6 @@
             <li>Contactless service available</li>
           </ul>
         </div>
-
         <div class="service-card">
           <div class="service-icon">
             <i class="ri-shield-check-line"></i>
@@ -1723,7 +1507,6 @@
       </div>
     </div>
   </section>
-
   <section class="before-after">
     <div class="container">
       <div class="section-header">
@@ -1733,50 +1516,47 @@
           See the dramatic difference our expert technicians make on every vehicle we repair.
         </p>
       </div>
-
       <div class="before-after-grid">
         <div class="before-after-card">
           <div class="before-after-images">
             <div class="ba-image">
-              <img src="https://images.pexels.com/photos/5365538/pexels-photo-5365538.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Damaged bumper">
+              <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=600&q=80" alt="Damaged vehicle before">
               <div class="ba-label">Before</div>
             </div>
             <div class="ba-image">
-              <img src="https://images.pexels.com/photos/3806288/pexels-photo-3806288.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Repaired bumper">
+              <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&q=80" alt="Repaired vehicle after">
               <div class="ba-label">After</div>
             </div>
           </div>
           <div class="before-after-info">
-            <h3>Front Bumper Collision</h3>
+            <h3>Front End Collision Repair</h3>
             <p>Complete bumper replacement, paint matching, and detailing</p>
           </div>
         </div>
-
         <div class="before-after-card">
           <div class="before-after-images">
             <div class="ba-image">
-              <img src="https://images.pexels.com/photos/13065705/pexels-photo-13065705.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Damaged side panel">
+              <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=600&q=80" alt="Damaged door before">
               <div class="ba-label">Before</div>
             </div>
             <div class="ba-image">
-              <img src="https://images.pexels.com/photos/3806256/pexels-photo-3806256.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Repaired side panel">
+              <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&q=80" alt="Repaired door after">
               <div class="ba-label">After</div>
             </div>
           </div>
           <div class="before-after-info">
-            <h3>Side Panel Repair</h3>
+            <h3>Side Panel Restoration</h3>
             <p>Dent removal, panel repair, and custom paint application</p>
           </div>
         </div>
-
         <div class="before-after-card">
           <div class="before-after-images">
             <div class="ba-image">
-              <img src="https://images.pexels.com/photos/13065690/pexels-photo-13065690.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Paint damage">
+              <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600&q=80" alt="Paint damage before">
               <div class="ba-label">Before</div>
             </div>
             <div class="ba-image">
-              <img src="https://images.pexels.com/photos/3806269/pexels-photo-3806269.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Perfect paint">
+              <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600&q=80" alt="Perfect paint after">
               <div class="ba-label">After</div>
             </div>
           </div>
@@ -1788,7 +1568,6 @@
       </div>
     </div>
   </section>
-
   <section class="process" id="process">
     <div class="container">
       <div class="section-header">
@@ -1798,7 +1577,6 @@
           From your first call to picking up your repaired vehicle, we make the process easy and transparent.
         </p>
       </div>
-
       <div class="process-grid">
         <div class="process-step">
           <div class="step-number">1</div>
@@ -1823,7 +1601,6 @@
       </div>
     </div>
   </section>
-
   <section class="testimonials" id="testimonials">
     <div class="container">
       <div class="section-header">
@@ -1833,7 +1610,6 @@
           Don't just take our word for it. Here's what our satisfied customers have to say about their experience.
         </p>
       </div>
-
       <div class="testimonials-carousel">
         <div class="testimonial-track" id="testimonialTrack">
           <div class="testimonial-slide">
@@ -1893,7 +1669,6 @@
       </div>
     </div>
   </section>
-
   <section class="gallery" id="gallery">
     <div class="container">
       <div class="section-header">
@@ -1903,30 +1678,28 @@
           Take a look at some of the vehicles we've restored to their former glory.
         </p>
       </div>
-
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/3806256/pexels-photo-3806256.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Car repair in progress">
+          <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=900&q=80" alt="Auto body paint booth">
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/3806288/pexels-photo-3806288.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Freshly painted vehicle">
+          <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=900&q=80" alt="Auto body shop workspace">
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/4489734/pexels-photo-4489734.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Detail work on car">
+          <img src="https://images.unsplash.com/photo-1632823469770-48bbbd810938?w=900&q=80" alt="Vehicle repair in progress">
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/3806269/pexels-photo-3806269.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Paint booth work">
+          <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=900&q=80" alt="Restored luxury vehicle">
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/5365538/pexels-photo-5365538.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Technician working">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=900&q=80" alt="Completed auto repair">
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/13065690/pexels-photo-13065690.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Quality inspection">
+          <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=900&q=80" alt="Professional paint finish">
         </div>
       </div>
     </div>
   </section>
-
   <section class="faq">
     <div class="container">
       <div class="section-header">
@@ -1936,7 +1709,6 @@
           Get answers to the most common questions about our services and repair process.
         </p>
       </div>
-
       <div class="faq-grid">
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFAQ(this)">
@@ -1949,7 +1721,6 @@
             </div>
           </div>
         </div>
-
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFAQ(this)">
             How long will my repair take?
@@ -1961,7 +1732,6 @@
             </div>
           </div>
         </div>
-
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFAQ(this)">
             Do you offer a warranty on repairs?
@@ -1973,7 +1743,6 @@
             </div>
           </div>
         </div>
-
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFAQ(this)">
             Can I choose my own repair shop?
@@ -1985,7 +1754,6 @@
             </div>
           </div>
         </div>
-
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFAQ(this)">
             Do you provide rental car assistance?
@@ -1997,7 +1765,6 @@
             </div>
           </div>
         </div>
-
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFAQ(this)">
             What forms of payment do you accept?
@@ -2012,7 +1779,6 @@
       </div>
     </div>
   </section>
-
   <section class="insurance">
     <div class="container">
       <h2>We Work With All Major Insurance Companies</h2>
@@ -2026,7 +1792,6 @@
       </div>
     </div>
   </section>
-
   <section class="cta">
     <div class="cta-content">
       <h2>Ready to Restore Your Vehicle?</h2>
@@ -2043,7 +1808,6 @@
       </div>
     </div>
   </section>
-
   <section class="contact" id="contact">
     <div class="container">
       <div class="section-header">
@@ -2053,7 +1817,6 @@
           Fill out the form below or call us directly. We're here to help get your vehicle back on the road.
         </p>
       </div>
-
       <div class="contact-grid">
         <div>
           <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
@@ -2087,7 +1850,6 @@
             </button>
           </form>
         </div>
-
         <div class="contact-info">
           <div class="info-card">
             <h3>
@@ -2098,7 +1860,6 @@
             <p><i class="ri-time-line"></i> Mon-Fri: 9:00 AM – 5:00 PM</p>
             <p><i class="ri-phone-fill"></i> 24/7 Emergency Service</p>
           </div>
-
           <div class="info-card" style="background: var(--gradient-accent);">
             <h3>
               <i class="ri-phone-line"></i>
@@ -2108,7 +1869,6 @@
             <p><i class="ri-smartphone-line"></i> Cell: <a href="tel:+14084994368">(408) 499-4368</a></p>
             <p><i class="ri-mail-line"></i> <a href="mailto:Autobody741@gmail.com">Autobody741@gmail.com</a></p>
           </div>
-
           <div class="map-container">
             <iframe
               src="https://www.google.com/maps?q=680+N+13th+St,+San+Jose,+CA+95112&output=embed"
@@ -2120,7 +1880,6 @@
       </div>
     </div>
   </section>
-
   <footer class="footer">
     <div class="footer-grid">
       <div class="footer-brand">
@@ -2133,7 +1892,6 @@
           <a href="#" class="social-link"><i class="ri-youtube-line"></i></a>
         </div>
       </div>
-
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
@@ -2144,7 +1902,6 @@
           <li><a href="#services">Insurance Claims</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
@@ -2155,7 +1912,6 @@
           <li><a href="#">Careers</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
         <h4>Quick Links</h4>
         <ul>
@@ -2167,16 +1923,13 @@
         </ul>
       </div>
     </div>
-
     <div class="footer-bottom">
       <p>&copy; <span id="year"></span> Paul's Auto Body. All rights reserved. | San Jose, CA</p>
     </div>
   </footer>
-
   <script>
     // Update year
     document.getElementById('year').textContent = new Date().getFullYear();
-
     // Header scroll effect
     window.addEventListener('scroll', () => {
       const header = document.getElementById('header');
@@ -2186,54 +1939,45 @@
         header.classList.remove('scrolled');
       }
     });
-
     // Main Carousel
     let currentSlide = 0;
     const carousel = document.getElementById('mainCarousel');
     const slides = carousel.querySelectorAll('.carousel-slide');
     const indicators = document.querySelectorAll('.carousel-indicator');
-
     function moveCarousel(direction) {
       currentSlide += direction;
       if (currentSlide < 0) currentSlide = slides.length - 1;
       if (currentSlide >= slides.length) currentSlide = 0;
       updateCarousel();
     }
-
     function goToSlide(index) {
       currentSlide = index;
       updateCarousel();
     }
-
     function updateCarousel() {
       carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
       indicators.forEach((indicator, index) => {
         indicator.classList.toggle('active', index === currentSlide);
       });
     }
-
     // Auto-play carousel
     setInterval(() => {
       moveCarousel(1);
     }, 5000);
-
     // Testimonials Carousel
     let currentTestimonial = 0;
     const testimonialTrack = document.getElementById('testimonialTrack');
     const testimonialSlides = testimonialTrack.querySelectorAll('.testimonial-slide');
-
     function moveTestimonial(direction) {
       currentTestimonial += direction;
       if (currentTestimonial < 0) currentTestimonial = testimonialSlides.length - 1;
       if (currentTestimonial >= testimonialSlides.length) currentTestimonial = 0;
       testimonialTrack.style.transform = `translateX(-${currentTestimonial * 100}%)`;
     }
-
     // Auto-play testimonials
     setInterval(() => {
       moveTestimonial(1);
     }, 6000);
-
     // FAQ Toggle
     function toggleFAQ(button) {
       const item = button.parentElement;
@@ -2249,7 +1993,6 @@
         item.classList.add('active');
       }
     }
-
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
