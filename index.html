@@ -13,23 +13,23 @@
   
   <style>
     :root {
-      --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      --gradient-accent: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-      --gradient-dark: linear-gradient(135deg, #1e1e2e 0%, #2a2a3e 100%);
-      --color-primary: #667eea;
-      --color-accent: #f5576c;
-      --color-dark: #1a1a2e;
+      --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      --gradient-accent: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+      --gradient-dark: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      --color-primary: #3b82f6;
+      --color-accent: #fbbf24;
+      --color-dark: #0f172a;
       --color-light: #ffffff;
-      --color-gray-50: #f9fafb;
-      --color-gray-100: #f3f4f6;
-      --color-gray-200: #e5e7eb;
-      --color-gray-300: #d1d5db;
-      --color-gray-400: #9ca3af;
-      --color-gray-500: #6b7280;
-      --color-gray-600: #4b5563;
-      --color-gray-700: #374151;
-      --color-gray-800: #1f2937;
-      --color-gray-900: #111827;
+      --color-gray-50: #f8fafc;
+      --color-gray-100: #f1f5f9;
+      --color-gray-200: #e2e8f0;
+      --color-gray-300: #cbd5e1;
+      --color-gray-400: #94a3b8;
+      --color-gray-500: #64748b;
+      --color-gray-600: #475569;
+      --color-gray-700: #334155;
+      --color-gray-800: #1e293b;
+      --color-gray-900: #0f172a;
     }
 
     * {
@@ -63,7 +63,7 @@
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f5576c 100%);
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #fbbf24 100%);
       background-size: 400% 400%;
       animation: gradientShift 15s ease infinite;
       opacity: 0.03;
@@ -160,7 +160,7 @@
       font-weight: 800;
       color: white;
       font-size: 20px;
-      box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
       position: relative;
       overflow: hidden;
     }
@@ -263,12 +263,12 @@
     .btn-primary {
       background: var(--gradient-primary);
       color: white;
-      box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 32px rgba(102, 126, 234, 0.5);
+      box-shadow: 0 12px 32px rgba(59, 130, 246, 0.5);
     }
 
     .btn-ghost {
@@ -316,8 +316,8 @@
       right: 0;
       bottom: 0;
       background: 
-        radial-gradient(circle at 20% 30%, rgba(102, 126, 234, 0.15), transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(245, 87, 108, 0.15), transparent 50%);
+        radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.15), transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(251, 191, 36, 0.15), transparent 50%);
       z-index: 0;
     }
 
@@ -425,20 +425,21 @@
     }
 
     .form-input {
-      padding: 14px 18px;
+      padding: 16px 20px;
       border: 2px solid var(--color-gray-200);
       border-radius: 12px;
-      font-size: 15px;
+      font-size: 16px;
       font-family: inherit;
       transition: all 0.3s ease;
       background: var(--color-gray-50);
+      width: 100%;
     }
 
     .form-input:focus {
       outline: none;
       border-color: var(--color-primary);
       background: white;
-      box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+      box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
     }
 
     /* Image Carousel Section */
@@ -695,7 +696,7 @@
       margin-bottom: 24px;
       font-size: 28px;
       color: white;
-      box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
     }
 
     .service-card h3 {
@@ -866,7 +867,7 @@
       font-size: 32px;
       font-weight: 800;
       color: white;
-      box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4);
+      box-shadow: 0 12px 40px rgba(59, 130, 246, 0.4);
     }
 
     .process-step h3 {
@@ -1235,7 +1236,7 @@
       color: white;
       padding: 32px;
       border-radius: 20px;
-      box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+      box-shadow: 0 20px 60px rgba(59, 130, 246, 0.3);
     }
 
     .info-card h3 {
@@ -1549,7 +1550,7 @@
     <div class="carousel-container">
       <div class="carousel-track" id="mainCarousel">
         <div class="carousel-slide">
-          <img src="https://images.pexels.com/photos/3807269/pexels-photo-3807269.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Professional auto painting">
+          <img src="https://images.pexels.com/photos/3806269/pexels-photo-3806269.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Professional auto painting">
           <div class="carousel-overlay">
             <div class="carousel-content">
               <h3>Professional Auto Painting</h3>
@@ -1558,7 +1559,7 @@
           </div>
         </div>
         <div class="carousel-slide">
-          <img src="https://images.pexels.com/photos/3807310/pexels-photo-3807310.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Expert technicians">
+          <img src="https://images.pexels.com/photos/4489734/pexels-photo-4489734.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Expert technicians">
           <div class="carousel-overlay">
             <div class="carousel-content">
               <h3>Expert Technicians</h3>
@@ -1567,7 +1568,7 @@
           </div>
         </div>
         <div class="carousel-slide">
-          <img src="https://images.pexels.com/photos/4489732/pexels-photo-4489732.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Quality inspection">
+          <img src="https://images.pexels.com/photos/13065690/pexels-photo-13065690.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Quality inspection">
           <div class="carousel-overlay">
             <div class="carousel-content">
               <h3>Quality Inspection</h3>
@@ -1737,11 +1738,11 @@
         <div class="before-after-card">
           <div class="before-after-images">
             <div class="ba-image">
-              <img src="https://images.pexels.com/photos/4489734/pexels-photo-4489734.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Damaged bumper">
+              <img src="https://images.pexels.com/photos/5365538/pexels-photo-5365538.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Damaged bumper">
               <div class="ba-label">Before</div>
             </div>
             <div class="ba-image">
-              <img src="https://images.pexels.com/photos/3807310/pexels-photo-3807310.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Repaired bumper">
+              <img src="https://images.pexels.com/photos/3806288/pexels-photo-3806288.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Repaired bumper">
               <div class="ba-label">After</div>
             </div>
           </div>
@@ -1754,11 +1755,11 @@
         <div class="before-after-card">
           <div class="before-after-images">
             <div class="ba-image">
-              <img src="https://images.pexels.com/photos/4489732/pexels-photo-4489732.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Damaged side panel">
+              <img src="https://images.pexels.com/photos/13065705/pexels-photo-13065705.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Damaged side panel">
               <div class="ba-label">Before</div>
             </div>
             <div class="ba-image">
-              <img src="https://images.pexels.com/photos/6200707/pexels-photo-6200707.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Repaired side panel">
+              <img src="https://images.pexels.com/photos/3806256/pexels-photo-3806256.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Repaired side panel">
               <div class="ba-label">After</div>
             </div>
           </div>
@@ -1771,11 +1772,11 @@
         <div class="before-after-card">
           <div class="before-after-images">
             <div class="ba-image">
-              <img src="https://images.pexels.com/photos/3807269/pexels-photo-3807269.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Paint damage">
+              <img src="https://images.pexels.com/photos/13065690/pexels-photo-13065690.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Paint damage">
               <div class="ba-label">Before</div>
             </div>
             <div class="ba-image">
-              <img src="https://images.pexels.com/photos/3807316/pexels-photo-3807316.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Perfect paint">
+              <img src="https://images.pexels.com/photos/3806269/pexels-photo-3806269.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Perfect paint">
               <div class="ba-label">After</div>
             </div>
           </div>
@@ -1905,22 +1906,22 @@
 
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/3807755/pexels-photo-3807755.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Car repair in progress">
+          <img src="https://images.pexels.com/photos/3806256/pexels-photo-3806256.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Car repair in progress">
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/6200707/pexels-photo-6200707.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Freshly painted vehicle">
+          <img src="https://images.pexels.com/photos/3806288/pexels-photo-3806288.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Freshly painted vehicle">
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/3807316/pexels-photo-3807316.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Detail work on car">
+          <img src="https://images.pexels.com/photos/4489734/pexels-photo-4489734.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Detail work on car">
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/3807269/pexels-photo-3807269.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Paint booth work">
+          <img src="https://images.pexels.com/photos/3806269/pexels-photo-3806269.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Paint booth work">
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/3807310/pexels-photo-3807310.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Technician working">
+          <img src="https://images.pexels.com/photos/5365538/pexels-photo-5365538.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Technician working">
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/4489732/pexels-photo-4489732.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Quality inspection">
+          <img src="https://images.pexels.com/photos/13065690/pexels-photo-13065690.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Quality inspection">
         </div>
       </div>
     </div>
