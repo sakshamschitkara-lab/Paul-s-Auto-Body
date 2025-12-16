@@ -24,6 +24,10 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet"
   />
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
 
   <script type="application/ld+json">
   {
@@ -63,6 +67,14 @@
 </head>
 
 <body>
+  <a href="#contact" class="top-bar">
+    <span class="top-bar-label"><i class="ri-time-line"></i> 24/7 Emergency Collision Help</span>
+    <span class="top-bar-text">
+      Call now:
+      <strong>(408) 995-0770</strong> · <strong>(408) 499-4368</strong>
+    </span>
+  </a>
+
   <header class="site-header">
     <div class="container header-inner">
       <a href="#top" class="logo">
@@ -76,36 +88,60 @@
       <nav class="nav" aria-label="Main navigation">
         <a href="#services">Services</a>
         <a href="#why-us">Why Us</a>
-        <a href="#process">How It Works</a>
+        <a href="#process">Process</a>
+        <a href="#gallery">Gallery</a>
         <a href="#reviews">Reviews</a>
         <a href="#contact">Contact</a>
       </nav>
 
       <div class="header-cta">
-        <a href="tel:+14089950770" class="btn btn-ghost hide-sm">Call (408) 995-0770</a>
-        <a href="#contact" class="btn btn-primary">Book Appointment</a>
+        <a href="tel:+14089950770" class="btn btn-ghost hide-sm">
+          <i class="ri-phone-fill"></i>
+          <span>Call (408) 995-0770</span>
+        </a>
+        <a href="#contact" class="btn btn-primary">
+          <i class="ri-calendar-check-line"></i>
+          <span>Book Appointment</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+          <i class="ri-menu-line"></i>
+        </button>
       </div>
     </div>
+
+    <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
+      <a href="#services">Services</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#process">Process</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:+14089950770">Call Office</a>
+      <a href="tel:+14084994368">Call Cell</a>
+    </nav>
   </header>
 
   <main id="top">
+    <!-- HERO -->
     <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-background" aria-hidden="true"></div>
       <div class="container hero-inner">
         <div class="hero-text">
           <p class="eyebrow">San Jose · Auto Body & Collision Repair</p>
-          <h1 id="hero-title">We care about your car like it’s our own.</h1>
+          <h1 id="hero-title">We bring wrecked cars back to life.</h1>
           <p class="hero-copy">
-            From minor dents to major collisions, Paul's Auto Body restores your vehicle
-            with precise bodywork, factory-quality paint, and 24/7 support from a local
-            San Jose shop you can trust.
+            From everyday fender benders to major collisions, Paul's Auto Body restores your vehicle
+            with precise bodywork, factory-quality paint, and clear communication from start to finish.
           </p>
 
           <div class="hero-actions">
             <a href="tel:+14089950770" class="btn btn-primary">
-              Call Office: (408) 995-0770
+              <i class="ri-phone-fill"></i>
+              <span>Office: (408) 995-0770</span>
             </a>
             <a href="tel:+14084994368" class="btn btn-outline">
-              Call Cell: (408) 499-4368
+              <i class="ri-smartphone-line"></i>
+              <span>Cell: (408) 499-4368</span>
             </a>
             <a
               href="https://www.google.com/maps?q=680+N+13th+St,+San+Jose,+CA+95112"
@@ -113,79 +149,117 @@
               rel="noopener"
               class="btn btn-ghost"
             >
-              Get Directions
+              <i class="ri-map-pin-line"></i>
+              <span>Get Directions</span>
             </a>
           </div>
 
           <dl class="hero-meta">
             <div class="meta-item">
-              <dt>Availability</dt>
-              <dd>24/7 emergency calls</dd>
+              <dt><i class="ri-time-line"></i> Availability</dt>
+              <dd>24/7 emergency phone support</dd>
             </div>
             <div class="meta-item">
-              <dt>Insurance</dt>
+              <dt><i class="ri-shield-check-line"></i> Insurance</dt>
               <dd>All insurance companies accepted</dd>
             </div>
             <div class="meta-item">
-              <dt>Location</dt>
+              <dt><i class="ri-map-pin-2-line"></i> Location</dt>
               <dd>680 N 13th St, San Jose, CA 95112</dd>
             </div>
           </dl>
         </div>
 
-        <figure class="hero-media">
+        <aside class="hero-panel" aria-label="Quick appointment">
+          <figure class="hero-media">
+            <img
+              src="https://images.pexels.com/photos/4489734/pexels-photo-4489734.jpeg?auto=compress&cs=tinysrgb&w=1000"
+              alt="Technician working on a damaged car bumper at an auto body shop"
+              loading="lazy"
+            />
+          </figure>
+          <div class="hero-panel-body">
+            <h2>Need help after an accident?</h2>
+            <p>Share a few details and we will call you back with options and timing.</p>
+            <form
+              class="quick-form"
+              action="https://formspree.io/f/your-form-id"
+              method="POST"
+            >
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                aria-label="Name"
+                required
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone"
+                aria-label="Phone number"
+                required
+              />
+              <button type="submit" class="btn btn-primary full-width">
+                Request Call Back
+              </button>
+            </form>
+            <p class="quick-note">
+              Or call us directly:
+              <strong>(408) 995-0770</strong>
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- IMAGE STRIP -->
+    <section class="image-strip" aria-label="Shop preview images">
+      <div class="container image-strip-inner">
+        <figure class="image-strip-item">
           <img
-            src="https://images.pexels.com/photos/4489734/pexels-photo-4489734.jpeg?auto=compress&cs=tinysrgb&w=900"
-            alt="Auto body technician repairing a red car bumper"
+            src="https://images.pexels.com/photos/3806269/pexels-photo-3806269.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt="Car prepared for painting in an auto body paint booth"
             loading="lazy"
           />
-          <figcaption>Precision repairs, color-matched paint, and clear communication.</figcaption>
+        </figure>
+        <figure class="image-strip-item">
+          <img
+            src="https://images.pexels.com/photos/3807310/pexels-photo-3807310.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt="Technician polishing the front bumper of a car"
+            loading="lazy"
+          />
+        </figure>
+        <figure class="image-strip-item">
+          <img
+            src="https://images.pexels.com/photos/4489732/pexels-photo-4489732.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt="Mechanic inspecting the side panel of a red car"
+            loading="lazy"
+          />
         </figure>
       </div>
     </section>
 
-    <section class="image-strip" aria-hidden="true">
-      <div class="container image-strip-inner">
-        <div class="image-strip-item">
-          <img
-            src="https://images.pexels.com/photos/3806269/pexels-photo-3806269.jpeg?auto=compress&cs=tinysrgb&w=800"
-            alt="Car being prepared for painting in a booth"
-            loading="lazy"
-          />
-        </div>
-        <div class="image-strip-item">
-          <img
-            src="https://images.pexels.com/photos/4489732/pexels-photo-4489732.jpeg?auto=compress&cs=tinysrgb&w=800"
-            alt=""
-            loading="lazy"
-          />
-        </div>
-        <div class="image-strip-item">
-          <img
-            src="https://images.pexels.com/photos/3807640/pexels-photo-3807640.jpeg?auto=compress&cs=tinysrgb&w=800"
-            alt=""
-            loading="lazy"
-          />
-        </div>
-      </div>
-    </section>
-
+    <!-- SERVICES -->
     <section id="services" class="section section-light">
       <div class="container">
         <header class="section-header">
           <h2>Collision & body services</h2>
           <p class="section-intro">
-            Complete auto body care in one place. We handle everything from the first estimate
-            to the final polish so your car comes back looking right.
+            Complete auto body care in one place. We handle the entire process so your car
+            comes back looking and driving like it should.
           </p>
         </header>
 
         <div class="grid services-grid">
           <article class="card service-card">
+            <div class="service-icon">
+              <i class="ri-car-washing-line"></i>
+            </div>
             <h3>Body Repair & Painting</h3>
             <p>
-              Full collision repair and paint refinishing to restore your vehicle
-              to pre-accident condition.
+              Full collision repair and paint refinishing to restore your vehicle to
+              pre-accident condition.
             </p>
             <ul>
               <li>Collision and dent repair</li>
@@ -195,19 +269,25 @@
           </article>
 
           <article class="card service-card">
+            <div class="service-icon">
+              <i class="ri-truck-line"></i>
+            </div>
             <h3>Truck & Semi Body Repair</h3>
             <p>
               Space, tools, and experience to handle commercial vans, box trucks,
               and semi trucks.
             </p>
             <ul>
-              <li>Semi truck body repairs</li>
-              <li>Commercial van & fleet repair</li>
-              <li>Fast turnaround scheduling</li>
+              <li>Semi truck body repair</li>
+              <li>Commercial van & fleet work</li>
+              <li>Flexible scheduling</li>
             </ul>
           </article>
 
           <article class="card service-card">
+            <div class="service-icon">
+              <i class="ri-tools-line"></i>
+            </div>
             <h3>All Kinds of Body Work</h3>
             <p>
               From parking lot dings to major damage, we repair all makes and models
@@ -215,38 +295,47 @@
             </p>
             <ul>
               <li>Minor dents and door dings</li>
-              <li>Panel replacement & alignment</li>
-              <li>Bumper, fender, and hood repairs</li>
+              <li>Panel repair & replacement</li>
+              <li>Bumpers, fenders, and hoods</li>
             </ul>
           </article>
 
           <article class="card service-card">
+            <div class="service-icon">
+              <i class="ri-home-4-line"></i>
+            </div>
             <h3>Home Pickup & Delivery</h3>
             <p>
               Prefer not to drive a damaged car? We can pick it up, repair it, and
               return it to your driveway.
             </p>
             <ul>
-              <li>Pickup from your home or work</li>
-              <li>Progress updates during repair</li>
-              <li>Drop-off once repairs are complete</li>
+              <li>Pickup from home or work</li>
+              <li>Updates while we repair</li>
+              <li>Drop-off when complete</li>
             </ul>
           </article>
 
           <article class="card service-card">
+            <div class="service-icon">
+              <i class="ri-roadster-line"></i>
+            </div>
             <h3>New & Old Car Repairs</h3>
             <p>
               Whether it’s a new lease or a car you’ve had for years, we repair it
               to a high standard.
             </p>
             <ul>
-              <li>Modern vehicles and advanced finishes</li>
+              <li>Modern vehicles & advanced finishes</li>
               <li>Older and classic cars</li>
-              <li>Cosmetic and structural work</li>
+              <li>Cosmetic & structural work</li>
             </ul>
           </article>
 
           <article class="card service-card">
+            <div class="service-icon">
+              <i class="ri-check-double-line"></i>
+            </div>
             <h3>We Fix All Damaged Cars</h3>
             <p>
               All insurance, all makes, all models. If it’s damaged, we can help
@@ -254,27 +343,34 @@
             </p>
             <ul>
               <li>Insurance and out-of-pocket jobs</li>
-              <li>Clear estimates and timelines</li>
+              <li>Clear estimates & timelines</li>
               <li>Honest guidance after accidents</li>
             </ul>
           </article>
         </div>
 
         <div class="section-cta">
-          <a href="#contact" class="btn btn-primary">Make an appointment</a>
-          <a href="tel:+14089950770" class="btn btn-outline">Call to schedule</a>
+          <a href="#contact" class="btn btn-primary">
+            <i class="ri-calendar-check-line"></i>
+            <span>Schedule your repair</span>
+          </a>
+          <a href="tel:+14089950770" class="btn btn-outline">
+            <i class="ri-phone-fill"></i>
+            <span>Call to book</span>
+          </a>
         </div>
       </div>
     </section>
 
+    <!-- WHY US -->
     <section id="why-us" class="section section-soft">
       <div class="container about-grid">
         <div>
           <header class="section-header alt">
             <h2>Why drivers choose Paul's Auto Body</h2>
             <p class="section-intro">
-              You’re not just a ticket number. We keep you in the loop, explain your options,
-              and treat your car with respect from day one.
+              You’re not just a ticket number. We keep you informed at every stage
+              and treat your car with the same care we’d want for our own.
             </p>
           </header>
 
@@ -296,36 +392,45 @@
               <dd><a href="mailto:Autobody741@gmail.com">Autobody741@gmail.com</a></dd>
             </div>
             <div>
-              <dt>Hours</dt>
-              <dd>Weekdays, Saturday & Sunday: 24 hours</dd>
+              <dt>Shop hours</dt>
+              <dd>Mon–Fri: 9:00 AM – 5:00 PM</dd>
+            </div>
+            <div>
+              <dt>Emergency</dt>
+              <dd>Phones monitored 24/7</dd>
             </div>
           </dl>
+
+          <div class="insurance-strip" aria-label="Insurance accepted">
+            <span><i class="ri-shield-check-line"></i> All major insurance companies accepted</span>
+          </div>
         </div>
 
         <aside class="card about-card">
           <h3>What sets us apart</h3>
           <ul class="feature-list">
             <li>
-              <strong>Expert engineers</strong><br />
-              A seasoned team focused on precise repairs and clean, factory-style finishes.
+              <strong>Expert engineers & technicians</strong><br />
+              A seasoned team focused on accurate bodywork, clean lines, and paint that matches.
             </li>
             <li>
-              <strong>Proven skills</strong><br />
-              Years of experience repairing everything from daily drivers to work trucks.
+              <strong>Experience & skill</strong><br />
+              Years of collision repair experience on everything from daily commuters to work trucks.
             </li>
             <li>
               <strong>Guaranteed service</strong><br />
-              We stand behind our work and take the time to get details right.
+              We stand behind our work and aim to exceed expectations on every repair.
             </li>
             <li>
-              <strong>Trusted work</strong><br />
-              Long-term customers, referrals, and consistent quality repairs.
+              <strong>Trusted in the community</strong><br />
+              Long-term customers and referrals from drivers all over San Jose.
             </li>
           </ul>
         </aside>
       </div>
     </section>
 
+    <!-- PROCESS -->
     <section id="process" class="section section-light">
       <div class="container">
         <header class="section-header">
@@ -340,15 +445,15 @@
             <span class="step-number">1</span>
             <h3>Call us or request a callback</h3>
             <p>
-              Tell us what happened, share photos if you have them, and we’ll outline
-              the next steps and timing.
+              Tell us what happened, share photos if you have them, and we will outline
+              next steps and timing.
             </p>
           </article>
           <article class="step-card">
             <span class="step-number">2</span>
             <h3>We inspect and create an estimate</h3>
             <p>
-              Bring your car in or schedule pickup. We’ll walk through the estimate
+              Bring your car in or schedule pickup. We walk you through the estimate
               and work with your insurance.
             </p>
           </article>
@@ -356,36 +461,37 @@
             <span class="step-number">3</span>
             <h3>Repairs, paint, and quality check</h3>
             <p>
-              Our team completes body repair, paint, and alignment, then inspects
-              everything before release.
+              Our team completes body repair, paint, and alignment, then double-checks
+              every detail before release.
             </p>
           </article>
           <article class="step-card">
             <span class="step-number">4</span>
             <h3>Pickup or home delivery</h3>
             <p>
-              Pick up your car at the shop or have it delivered to your home, fully
-              repaired and cleaned.
+              Pick up your car at the shop or have it delivered to your home, cleaned
+              and ready to drive.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-gallery">
+    <!-- GALLERY -->
+    <section id="gallery" class="section section-gallery">
       <div class="container">
         <header class="section-header">
-          <h2>Before & after style results</h2>
+          <h2>Repair results you can see</h2>
           <p class="section-intro">
-            A glimpse at the kind of work we do every day at Paul’s Auto Body.
+            A glimpse at the kind of work we do every day in the shop.
           </p>
         </header>
 
         <div class="grid gallery-grid">
           <figure class="gallery-item">
             <img
-              src="https://images.pexels.com/photos/3807310/pexels-photo-3807310.jpeg?auto=compress&cs=tinysrgb&w=900"
-              alt="Technician polishing the front of a white car in a workshop"
+              src="https://images.pexels.com/photos/3807755/pexels-photo-3807755.jpeg?auto=compress&cs=tinysrgb&w=900"
+              alt="Mechanic inspecting the front of a black car"
               loading="lazy"
             />
           </figure>
@@ -398,8 +504,8 @@
           </figure>
           <figure class="gallery-item">
             <img
-              src="https://images.pexels.com/photos/3807755/pexels-photo-3807755.jpeg?auto=compress&cs=tinysrgb&w=900"
-              alt="Mechanic checking the front of a black car"
+              src="https://images.pexels.com/photos/3807316/pexels-photo-3807316.jpeg?auto=compress&cs=tinysrgb&w=900"
+              alt="Detailing and polishing the side of a white car"
               loading="lazy"
             />
           </figure>
@@ -407,6 +513,7 @@
       </div>
     </section>
 
+    <!-- REVIEWS -->
     <section id="reviews" class="section section-soft">
       <div class="container">
         <header class="section-header alt">
@@ -438,18 +545,18 @@
         <div class="grid reviews-grid">
           <article class="card review-card">
             <p class="review-text">
-              “Absolutely thrilled with the exceptional service provided by Paul's Auto Body!
+              "Absolutely thrilled with the exceptional service provided by Paul's Auto Body!
               From the moment I walked in, I was greeted with professionalism and genuine care.
-              They went above and beyond and delivered outstanding results.”
+              They went above and beyond and delivered outstanding results."
             </p>
             <p class="review-author">Howard Chavez · Entrepreneur</p>
           </article>
 
           <article class="card review-card">
             <p class="review-text">
-              “I can't thank Paul's Auto Body enough for their incredible work on my vehicle.
+              "I can't thank Paul's Auto Body enough for their incredible work on my vehicle.
               They handled everything after an accident and made sure every detail was perfect.
-              I won't trust anyone else with my car.”
+              I won't trust anyone else with my car."
             </p>
             <p class="review-author">Lucas Elliot · Designer</p>
           </article>
@@ -457,20 +564,65 @@
       </div>
     </section>
 
-    <section id="contact" class="section section-light">
+    <!-- FAQ -->
+    <section class="section section-light">
+      <div class="container">
+        <header class="section-header">
+          <h2>Frequently asked questions</h2>
+          <p class="section-intro">
+            Quick answers to common questions about repairs, insurance, and timing.
+          </p>
+        </header>
+
+        <div class="faq-grid" itemscope itemtype="https://schema.org/FAQPage">
+          <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" open>
+            <summary itemprop="name">Do you work with my insurance company?</summary>
+            <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">
+                Yes. We work with all major insurance companies and can help you understand
+                your estimate and next steps.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">Can I bring my car even if the other driver was at fault?</summary>
+            <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">
+                Yes. You can choose the repair shop. We can coordinate with the responsible
+                insurance company as needed.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">How long will repairs take?</summary>
+            <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">
+                Timing depends on the damage and parts availability, but we will give you
+                an estimated timeline after the inspection and keep you updated.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section-light contact-section">
       <div class="container contact-grid">
         <div>
           <header class="section-header">
             <h2>Request a call back</h2>
             <p class="section-intro">
-              Share a few details about your car and the damage. We’ll call you to confirm
+              Share a few details about your car and the damage. We will call you to confirm
               details, timing, and next steps.
             </p>
           </header>
 
           <form
             class="contact-form"
-            id="callback-form"
+            id="callback-form-main"
             action="https://formspree.io/f/your-form-id"
             method="POST"
           >
@@ -479,24 +631,24 @@
             <p class="required-note">Fields marked with * are required</p>
 
             <div class="form-row">
-              <label for="name">Name *</label>
-              <input id="name" name="name" type="text" autocomplete="name" required />
+              <label for="name-main">Name *</label>
+              <input id="name-main" name="name" type="text" autocomplete="name" required />
             </div>
 
             <div class="form-row">
-              <label for="phone">Phone Number *</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+              <label for="phone-main">Phone Number *</label>
+              <input id="phone-main" name="phone" type="tel" autocomplete="tel" required />
             </div>
 
             <div class="form-row">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" />
+              <label for="email-main">Email</label>
+              <input id="email-main" name="email" type="email" autocomplete="email" />
             </div>
 
             <div class="form-row">
-              <label for="description">Description *</label>
+              <label for="description-main">Description *</label>
               <textarea
-                id="description"
+                id="description-main"
                 name="description"
                 rows="4"
                 placeholder="What happened? Vehicle make, model, year, and insurance if you have it."
@@ -505,8 +657,8 @@
             </div>
 
             <div class="form-row">
-              <label for="date">Preferred appointment date</label>
-              <input id="date" name="date" type="date" />
+              <label for="date-main">Preferred appointment date</label>
+              <input id="date-main" name="date" type="date" />
             </div>
 
             <button type="submit" class="btn btn-primary full-width">
@@ -553,34 +705,25 @@
       </div>
     </section>
 
-    <section class="section section-soft footer-top">
-      <div class="container footer-top-grid">
-        <div>
-          <h3>Core services</h3>
-          <ul class="footer-list">
-            <li>Truck body repair</li>
-            <li>Body repair & painting</li>
-            <li>Paint & scratch services</li>
-            <li>Auto maintenance & diagnosis</li>
-            <li>Tires & wheel balancing</li>
-            <li>Towing service</li>
-            <li>Jump start support</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Emergency calls 24/7</h3>
-          <p class="small">
-            Office: <a href="tel:+14089950770">(408) 995-0770</a><br />
-            Cell: <a href="tel:+14084994368">(408) 499-4368</a>
+    <!-- BOTTOM CTA -->
+    <section class="section section-soft bottom-cta">
+      <div class="container bottom-cta-inner">
+        <div class="bottom-cta-text">
+          <h2>Had an accident? We can help today.</h2>
+          <p>
+            Call now or send a quick request so we can get your vehicle on the schedule
+            and back on the road.
           </p>
-          <a href="#contact" class="btn btn-primary">Book an appointment today</a>
         </div>
-        <div>
-          <h3>Shop hours</h3>
-          <p class="small">
-            Mon – Fri: 9:00 AM – 5:00 PM<br />
-            Phones monitored 24/7 for emergencies
-          </p>
+        <div class="bottom-cta-actions">
+          <a href="tel:+14089950770" class="btn btn-primary">
+            <i class="ri-phone-fill"></i>
+            <span>Call (408) 995-0770</span>
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="ri-calendar-line"></i>
+            <span>Book Online</span>
+          </a>
         </div>
       </div>
     </section>
@@ -599,6 +742,21 @@
     const yearEl = document.getElementById("year");
     if (yearEl) {
       yearEl.textContent = new Date().getFullYear();
+    }
+
+    const navToggle = document.getElementById("nav-toggle");
+    const navMobile = document.getElementById("nav-mobile");
+
+    if (navToggle && navMobile) {
+      navToggle.addEventListener("click", () => {
+        navMobile.classList.toggle("nav-mobile-open");
+      });
+
+      navMobile.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navMobile.classList.remove("nav-mobile-open");
+        });
+      });
     }
   </script>
 </body>
