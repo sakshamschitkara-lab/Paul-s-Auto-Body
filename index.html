@@ -2,762 +2,982 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Paul's Auto Body | Collision Repair & Auto Paint in San Jose, CA</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Paul's Auto Body in San Jose, CA provides expert collision repair, auto body work, paint services, and truck body repair. 24/7 emergency calls and all insurance accepted."
-  />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.example.com/" />
-
-  <meta property="og:title" content="Paul's Auto Body | Collision Repair & Auto Paint in San Jose, CA" />
-  <meta property="og:description" content="Collision repair, body work, and paint services in San Jose. 24/7 emergency calls and all insurance accepted." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.example.com/" />
-  <meta property="og:image" content="https://images.pexels.com/photos/4489734/pexels-photo-4489734.jpeg" />
-
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paul's Auto Body | Expert Collision Repair in San Jose, CA</title>
+  <meta name="description" content="San Jose's trusted auto body shop. Expert collision repair, custom paint, and restoration. 24/7 emergency service. All insurance accepted." />
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  
+  <style>
+    :root {
+      --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --gradient-accent: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --gradient-dark: linear-gradient(135deg, #1e1e2e 0%, #2a2a3e 100%);
+      --color-primary: #667eea;
+      --color-accent: #f5576c;
+      --color-dark: #1a1a2e;
+      --color-light: #ffffff;
+      --color-gray-50: #f9fafb;
+      --color-gray-100: #f3f4f6;
+      --color-gray-200: #e5e7eb;
+      --color-gray-300: #d1d5db;
+      --color-gray-400: #9ca3af;
+      --color-gray-500: #6b7280;
+      --color-gray-600: #4b5563;
+      --color-gray-700: #374151;
+      --color-gray-800: #1f2937;
+      --color-gray-900: #111827;
+    }
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AutoBodyShop",
-    "name": "Paul's Auto Body",
-    "image": "https://images.pexels.com/photos/4489734/pexels-photo-4489734.jpeg",
-    "url": "https://www.example.com/",
-    "telephone": "+1-408-995-0770",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "680 N 13th St",
-      "addressLocality": "San Jose",
-      "addressRegion": "CA",
-      "postalCode": "95112",
-      "addressCountry": "US"
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "00:00",
-        "closes": "23:59"
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--color-gray-800);
+      background: var(--color-light);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Animated Background */
+    .animated-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f5576c 100%);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      opacity: 0.03;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Top Alert Bar */
+    .top-alert {
+      background: var(--gradient-accent);
+      color: white;
+      padding: 12px 20px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .top-alert::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      animation: shimmer 3s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+
+    .top-alert i {
+      margin-right: 8px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+
+    /* Header */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid var(--color-gray-200);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .header.scrolled {
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 16px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: translateY(-2px);
+    }
+
+    .logo-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--gradient-primary);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: white;
+      font-size: 20px;
+      box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo-icon::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+      transform: rotate(45deg);
+      animation: logoShine 3s infinite;
+    }
+
+    @keyframes logoShine {
+      0% { transform: translateX(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) rotate(45deg); }
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .logo-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--color-dark);
+      letter-spacing: -0.5px;
+    }
+
+    .logo-subtitle {
+      font-size: 12px;
+      color: var(--color-gray-500);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--color-gray-700);
+      font-weight: 500;
+      font-size: 15px;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gradient-primary);
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
+
+    .nav-links a:hover {
+      color: var(--color-primary);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--gradient-primary);
+      color: white;
+      box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(102, 126, 234, 0.5);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--color-gray-700);
+      border: 2px solid var(--color-gray-200);
+    }
+
+    .btn-ghost:hover {
+      background: var(--color-gray-100);
+      border-color: var(--color-gray-300);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--color-dark);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      padding: 120px 40px 100px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 30%, rgba(102, 126, 234, 0.15), transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(245, 87, 108, 0.15), transparent 50%);
+      z-index: 0;
+    }
+
+    .hero-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content h1 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(42px, 6vw, 68px);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      color: var(--color-dark);
+      letter-spacing: -2px;
+    }
+
+    .hero-content h1 .gradient-text {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-description {
+      font-size: 20px;
+      color: var(--color-gray-600);
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      padding-top: 32px;
+      border-top: 1px solid var(--color-gray-200);
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 32px;
+      font-weight: 800;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: var(--color-gray-500);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-image {
+      position: relative;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .hero-card {
+      background: white;
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+      border: 1px solid var(--color-gray-200);
+    }
+
+    .hero-card h3 {
+      font-size: 22px;
+      margin-bottom: 16px;
+      color: var(--color-dark);
+    }
+
+    .hero-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .form-input {
+      padding: 14px 18px;
+      border: 2px solid var(--color-gray-200);
+      border-radius: 12px;
+      font-size: 15px;
+      font-family: inherit;
+      transition: all 0.3s ease;
+      background: var(--color-gray-50);
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      background: white;
+      box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+    }
+
+    /* Services Section */
+    .services {
+      padding: 100px 40px;
+      background: white;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-label {
+      display: inline-block;
+      padding: 8px 20px;
+      background: var(--color-gray-100);
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: var(--color-dark);
+      letter-spacing: -1px;
+    }
+
+    .section-description {
+      font-size: 18px;
+      color: var(--color-gray-600);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+    }
+
+    .service-card {
+      background: white;
+      border: 2px solid var(--color-gray-100);
+      border-radius: 20px;
+      padding: 40px 32px;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--gradient-primary);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: 0;
+    }
+
+    .service-card:hover::before {
+      opacity: 0.05;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+      border-color: var(--color-primary);
+    }
+
+    .service-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .service-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--gradient-primary);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      font-size: 28px;
+      color: white;
+      box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+    }
+
+    .service-card h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+      color: var(--color-dark);
+      font-weight: 700;
+    }
+
+    .service-card p {
+      color: var(--color-gray-600);
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+
+    .service-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .service-card li {
+      padding: 8px 0;
+      color: var(--color-gray-600);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+    }
+
+    .service-card li::before {
+      content: '✓';
+      color: var(--color-primary);
+      font-weight: 700;
+    }
+
+    /* Process Section */
+    .process {
+      padding: 100px 40px;
+      background: var(--color-gray-50);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 40px;
+      margin-top: 64px;
+    }
+
+    .process-step {
+      text-align: center;
+      position: relative;
+    }
+
+    .process-step::after {
+      content: '→';
+      position: absolute;
+      top: 40px;
+      right: -20px;
+      font-size: 32px;
+      color: var(--color-gray-300);
+      font-weight: 300;
+    }
+
+    .process-step:last-child::after {
+      display: none;
+    }
+
+    .step-number {
+      width: 80px;
+      height: 80px;
+      background: var(--gradient-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 32px;
+      font-weight: 800;
+      color: white;
+      box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4);
+    }
+
+    .process-step h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: var(--color-dark);
+    }
+
+    .process-step p {
+      color: var(--color-gray-600);
+      line-height: 1.7;
+    }
+
+    /* Gallery */
+    .gallery {
+      padding: 100px 40px;
+      background: white;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .gallery-item {
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 4/3;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.6));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover::after {
+      opacity: 1;
+    }
+
+    /* CTA Section */
+    .cta {
+      padding: 100px 40px;
+      background: var(--gradient-primary);
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      animation: rotate 20s linear infinite;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta h2 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 800;
+      margin-bottom: 24px;
+      letter-spacing: -1px;
+    }
+
+    .cta p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      opacity: 0.95;
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-white {
+      background: white;
+      color: var(--color-primary);
+    }
+
+    .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(255, 255, 255, 0.3);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--color-dark);
+      color: var(--color-gray-400);
+      padding: 80px 40px 40px;
+    }
+
+    .footer-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+
+    .footer-brand h3 {
+      color: white;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand p {
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .footer-col h4 {
+      color: white;
+      font-size: 16px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 12px;
+    }
+
+    .footer-col a {
+      color: var(--color-gray-400);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .nav-links {
+        display: none;
       }
-    ],
-    "description": "Collision repair, auto body work, paint services, and truck body repair in San Jose, CA. 24/7 emergency calls and all insurance accepted."
-  }
-  </script>
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .hero-container {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        padding: 16px 20px;
+      }
+
+      .hero {
+        padding: 80px 20px 60px;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .services,
+      .process,
+      .gallery,
+      .cta {
+        padding: 60px 20px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .btn-ghost.hide-mobile {
+        display: none;
+      }
+    }
+  </style>
 </head>
-
 <body>
-  <a href="#contact" class="top-bar">
-    <span class="top-bar-label"><i class="ri-time-line"></i> 24/7 Emergency Collision Help</span>
-    <span class="top-bar-text">
-      Call now:
-      <strong>(408) 995-0770</strong> · <strong>(408) 499-4368</strong>
-    </span>
-  </a>
+  <div class="animated-bg"></div>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#top" class="logo">
-        <div class="logo-mark">PA</div>
+  <!-- Top Alert -->
+  <div class="top-alert">
+    <i class="ri-phone-line"></i>
+    <strong>24/7 Emergency Service</strong> - Call Now: (408) 995-0770
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <nav class="nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">PA</div>
         <div class="logo-text">
-          <span class="logo-title">Paul's Auto Body</span>
-          <span class="logo-subtitle">Collision & Paint Specialists</span>
+          <div class="logo-title">Paul's Auto Body</div>
+          <div class="logo-subtitle">Since 1995</div>
         </div>
       </a>
 
-      <nav class="nav" aria-label="Main navigation">
+      <div class="nav-links">
         <a href="#services">Services</a>
-        <a href="#why-us">Why Us</a>
         <a href="#process">Process</a>
         <a href="#gallery">Gallery</a>
-        <a href="#reviews">Reviews</a>
         <a href="#contact">Contact</a>
-      </nav>
+      </div>
 
-      <div class="header-cta">
-        <a href="tel:+14089950770" class="btn btn-ghost hide-sm">
-          <i class="ri-phone-fill"></i>
-          <span>Call (408) 995-0770</span>
+      <div class="header-actions">
+        <a href="tel:+14089950770" class="btn btn-ghost hide-mobile">
+          <i class="ri-phone-line"></i>
+          Call Now
         </a>
         <a href="#contact" class="btn btn-primary">
           <i class="ri-calendar-check-line"></i>
-          <span>Book Appointment</span>
+          Book Appointment
         </a>
-        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <button class="mobile-menu-btn">
           <i class="ri-menu-line"></i>
         </button>
       </div>
-    </div>
-
-    <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
-      <a href="#services">Services</a>
-      <a href="#why-us">Why Us</a>
-      <a href="#process">Process</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
-      <a href="tel:+14089950770">Call Office</a>
-      <a href="tel:+14084994368">Call Cell</a>
     </nav>
   </header>
 
-  <main id="top">
-    <!-- HERO -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-background" aria-hidden="true"></div>
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <p class="eyebrow">San Jose · Auto Body & Collision Repair</p>
-          <h1 id="hero-title">We bring wrecked cars back to life.</h1>
-          <p class="hero-copy">
-            From everyday fender benders to major collisions, Paul's Auto Body restores your vehicle
-            with precise bodywork, factory-quality paint, and clear communication from start to finish.
-          </p>
-
-          <div class="hero-actions">
-            <a href="tel:+14089950770" class="btn btn-primary">
-              <i class="ri-phone-fill"></i>
-              <span>Office: (408) 995-0770</span>
-            </a>
-            <a href="tel:+14084994368" class="btn btn-outline">
-              <i class="ri-smartphone-line"></i>
-              <span>Cell: (408) 499-4368</span>
-            </a>
-            <a
-              href="https://www.google.com/maps?q=680+N+13th+St,+San+Jose,+CA+95112"
-              target="_blank"
-              rel="noopener"
-              class="btn btn-ghost"
-            >
-              <i class="ri-map-pin-line"></i>
-              <span>Get Directions</span>
-            </a>
-          </div>
-
-          <dl class="hero-meta">
-            <div class="meta-item">
-              <dt><i class="ri-time-line"></i> Availability</dt>
-              <dd>24/7 emergency phone support</dd>
-            </div>
-            <div class="meta-item">
-              <dt><i class="ri-shield-check-line"></i> Insurance</dt>
-              <dd>All insurance companies accepted</dd>
-            </div>
-            <div class="meta-item">
-              <dt><i class="ri-map-pin-2-line"></i> Location</dt>
-              <dd>680 N 13th St, San Jose, CA 95112</dd>
-            </div>
-          </dl>
-        </div>
-
-        <aside class="hero-panel" aria-label="Quick appointment">
-          <figure class="hero-media">
-            <img
-              src="https://images.pexels.com/photos/4489734/pexels-photo-4489734.jpeg?auto=compress&cs=tinysrgb&w=1000"
-              alt="Technician working on a damaged car bumper at an auto body shop"
-              loading="lazy"
-            />
-          </figure>
-          <div class="hero-panel-body">
-            <h2>Need help after an accident?</h2>
-            <p>Share a few details and we will call you back with options and timing.</p>
-            <form
-              class="quick-form"
-              action="https://formspree.io/f/your-form-id"
-              method="POST"
-            >
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                aria-label="Name"
-                required
-              />
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone"
-                aria-label="Phone number"
-                required
-              />
-              <button type="submit" class="btn btn-primary full-width">
-                Request Call Back
-              </button>
-            </form>
-            <p class="quick-note">
-              Or call us directly:
-              <strong>(408) 995-0770</strong>
-            </p>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- IMAGE STRIP -->
-    <section class="image-strip" aria-label="Shop preview images">
-      <div class="container image-strip-inner">
-        <figure class="image-strip-item">
-          <img
-            src="https://images.pexels.com/photos/3806269/pexels-photo-3806269.jpeg?auto=compress&cs=tinysrgb&w=800"
-            alt="Car prepared for painting in an auto body paint booth"
-            loading="lazy"
-          />
-        </figure>
-        <figure class="image-strip-item">
-          <img
-            src="https://images.pexels.com/photos/3807310/pexels-photo-3807310.jpeg?auto=compress&cs=tinysrgb&w=800"
-            alt="Technician polishing the front bumper of a car"
-            loading="lazy"
-          />
-        </figure>
-        <figure class="image-strip-item">
-          <img
-            src="https://images.pexels.com/photos/4489732/pexels-photo-4489732.jpeg?auto=compress&cs=tinysrgb&w=800"
-            alt="Mechanic inspecting the side panel of a red car"
-            loading="lazy"
-          />
-        </figure>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="section section-light">
-      <div class="container">
-        <header class="section-header">
-          <h2>Collision & body services</h2>
-          <p class="section-intro">
-            Complete auto body care in one place. We handle the entire process so your car
-            comes back looking and driving like it should.
-          </p>
-        </header>
-
-        <div class="grid services-grid">
-          <article class="card service-card">
-            <div class="service-icon">
-              <i class="ri-car-washing-line"></i>
-            </div>
-            <h3>Body Repair & Painting</h3>
-            <p>
-              Full collision repair and paint refinishing to restore your vehicle to
-              pre-accident condition.
-            </p>
-            <ul>
-              <li>Collision and dent repair</li>
-              <li>Color-matched paint & clear coat</li>
-              <li>Scratch, scuff, and panel refinishing</li>
-            </ul>
-          </article>
-
-          <article class="card service-card">
-            <div class="service-icon">
-              <i class="ri-truck-line"></i>
-            </div>
-            <h3>Truck & Semi Body Repair</h3>
-            <p>
-              Space, tools, and experience to handle commercial vans, box trucks,
-              and semi trucks.
-            </p>
-            <ul>
-              <li>Semi truck body repair</li>
-              <li>Commercial van & fleet work</li>
-              <li>Flexible scheduling</li>
-            </ul>
-          </article>
-
-          <article class="card service-card">
-            <div class="service-icon">
-              <i class="ri-tools-line"></i>
-            </div>
-            <h3>All Kinds of Body Work</h3>
-            <p>
-              From parking lot dings to major damage, we repair all makes and models
-              with care.
-            </p>
-            <ul>
-              <li>Minor dents and door dings</li>
-              <li>Panel repair & replacement</li>
-              <li>Bumpers, fenders, and hoods</li>
-            </ul>
-          </article>
-
-          <article class="card service-card">
-            <div class="service-icon">
-              <i class="ri-home-4-line"></i>
-            </div>
-            <h3>Home Pickup & Delivery</h3>
-            <p>
-              Prefer not to drive a damaged car? We can pick it up, repair it, and
-              return it to your driveway.
-            </p>
-            <ul>
-              <li>Pickup from home or work</li>
-              <li>Updates while we repair</li>
-              <li>Drop-off when complete</li>
-            </ul>
-          </article>
-
-          <article class="card service-card">
-            <div class="service-icon">
-              <i class="ri-roadster-line"></i>
-            </div>
-            <h3>New & Old Car Repairs</h3>
-            <p>
-              Whether it’s a new lease or a car you’ve had for years, we repair it
-              to a high standard.
-            </p>
-            <ul>
-              <li>Modern vehicles & advanced finishes</li>
-              <li>Older and classic cars</li>
-              <li>Cosmetic & structural work</li>
-            </ul>
-          </article>
-
-          <article class="card service-card">
-            <div class="service-icon">
-              <i class="ri-check-double-line"></i>
-            </div>
-            <h3>We Fix All Damaged Cars</h3>
-            <p>
-              All insurance, all makes, all models. If it’s damaged, we can help
-              you get it back on the road.
-            </p>
-            <ul>
-              <li>Insurance and out-of-pocket jobs</li>
-              <li>Clear estimates & timelines</li>
-              <li>Honest guidance after accidents</li>
-            </ul>
-          </article>
-        </div>
-
-        <div class="section-cta">
-          <a href="#contact" class="btn btn-primary">
-            <i class="ri-calendar-check-line"></i>
-            <span>Schedule your repair</span>
-          </a>
-          <a href="tel:+14089950770" class="btn btn-outline">
-            <i class="ri-phone-fill"></i>
-            <span>Call to book</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHY US -->
-    <section id="why-us" class="section section-soft">
-      <div class="container about-grid">
-        <div>
-          <header class="section-header alt">
-            <h2>Why drivers choose Paul's Auto Body</h2>
-            <p class="section-intro">
-              You’re not just a ticket number. We keep you informed at every stage
-              and treat your car with the same care we’d want for our own.
-            </p>
-          </header>
-
-          <dl class="info-grid">
-            <div>
-              <dt>Address</dt>
-              <dd>680 N 13th St, San Jose, CA 95112, United States</dd>
-            </div>
-            <div>
-              <dt>Office</dt>
-              <dd><a href="tel:+14089950770">(408) 995-0770</a></dd>
-            </div>
-            <div>
-              <dt>Cell</dt>
-              <dd><a href="tel:+14084994368">(408) 499-4368</a></dd>
-            </div>
-            <div>
-              <dt>Email</dt>
-              <dd><a href="mailto:Autobody741@gmail.com">Autobody741@gmail.com</a></dd>
-            </div>
-            <div>
-              <dt>Shop hours</dt>
-              <dd>Mon–Fri: 9:00 AM – 5:00 PM</dd>
-            </div>
-            <div>
-              <dt>Emergency</dt>
-              <dd>Phones monitored 24/7</dd>
-            </div>
-          </dl>
-
-          <div class="insurance-strip" aria-label="Insurance accepted">
-            <span><i class="ri-shield-check-line"></i> All major insurance companies accepted</span>
-          </div>
-        </div>
-
-        <aside class="card about-card">
-          <h3>What sets us apart</h3>
-          <ul class="feature-list">
-            <li>
-              <strong>Expert engineers & technicians</strong><br />
-              A seasoned team focused on accurate bodywork, clean lines, and paint that matches.
-            </li>
-            <li>
-              <strong>Experience & skill</strong><br />
-              Years of collision repair experience on everything from daily commuters to work trucks.
-            </li>
-            <li>
-              <strong>Guaranteed service</strong><br />
-              We stand behind our work and aim to exceed expectations on every repair.
-            </li>
-            <li>
-              <strong>Trusted in the community</strong><br />
-              Long-term customers and referrals from drivers all over San Jose.
-            </li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section id="process" class="section section-light">
-      <div class="container">
-        <header class="section-header">
-          <h2>How the repair process works</h2>
-          <p class="section-intro">
-            Simple, clear steps from your first call to the day you pick up your car.
-          </p>
-        </header>
-
-        <div class="grid steps-grid">
-          <article class="step-card">
-            <span class="step-number">1</span>
-            <h3>Call us or request a callback</h3>
-            <p>
-              Tell us what happened, share photos if you have them, and we will outline
-              next steps and timing.
-            </p>
-          </article>
-          <article class="step-card">
-            <span class="step-number">2</span>
-            <h3>We inspect and create an estimate</h3>
-            <p>
-              Bring your car in or schedule pickup. We walk you through the estimate
-              and work with your insurance.
-            </p>
-          </article>
-          <article class="step-card">
-            <span class="step-number">3</span>
-            <h3>Repairs, paint, and quality check</h3>
-            <p>
-              Our team completes body repair, paint, and alignment, then double-checks
-              every detail before release.
-            </p>
-          </article>
-          <article class="step-card">
-            <span class="step-number">4</span>
-            <h3>Pickup or home delivery</h3>
-            <p>
-              Pick up your car at the shop or have it delivered to your home, cleaned
-              and ready to drive.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section id="gallery" class="section section-gallery">
-      <div class="container">
-        <header class="section-header">
-          <h2>Repair results you can see</h2>
-          <p class="section-intro">
-            A glimpse at the kind of work we do every day in the shop.
-          </p>
-        </header>
-
-        <div class="grid gallery-grid">
-          <figure class="gallery-item">
-            <img
-              src="https://images.pexels.com/photos/3807755/pexels-photo-3807755.jpeg?auto=compress&cs=tinysrgb&w=900"
-              alt="Mechanic inspecting the front of a black car"
-              loading="lazy"
-            />
-          </figure>
-          <figure class="gallery-item">
-            <img
-              src="https://images.pexels.com/photos/6200707/pexels-photo-6200707.jpeg?auto=compress&cs=tinysrgb&w=900"
-              alt="Freshly painted red car in an auto body shop"
-              loading="lazy"
-            />
-          </figure>
-          <figure class="gallery-item">
-            <img
-              src="https://images.pexels.com/photos/3807316/pexels-photo-3807316.jpeg?auto=compress&cs=tinysrgb&w=900"
-              alt="Detailing and polishing the side of a white car"
-              loading="lazy"
-            />
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- REVIEWS -->
-    <section id="reviews" class="section section-soft">
-      <div class="container">
-        <header class="section-header alt">
-          <h2>What our customers say</h2>
-          <p class="section-intro">
-            Drivers across San Jose trust Paul's Auto Body after accidents, big and small.
-          </p>
-        </header>
-
-        <div class="reviews-summary">
-          <div class="reviews-stat">
-            <span class="reviews-score">4.6</span>
-            <span class="reviews-label">Rated 4.6 out of 5<br />Based on 642 reviews</span>
-          </div>
-          <div class="reviews-stat">
-            <span class="reviews-score">4.5</span>
-            <span class="reviews-label">Rated 4.5 out of 5<br />Based on 356 reviews</span>
-          </div>
-          <div class="reviews-stat">
-            <span class="reviews-score">4.4</span>
-            <span class="reviews-label">Rated 4.4 out of 5<br />Based on 853 reviews</span>
-          </div>
-          <div class="reviews-stat">
-            <span class="reviews-score">4.7</span>
-            <span class="reviews-label">Rated 4.7 out of 5<br />Based on 248 reviews</span>
-          </div>
-        </div>
-
-        <div class="grid reviews-grid">
-          <article class="card review-card">
-            <p class="review-text">
-              "Absolutely thrilled with the exceptional service provided by Paul's Auto Body!
-              From the moment I walked in, I was greeted with professionalism and genuine care.
-              They went above and beyond and delivered outstanding results."
-            </p>
-            <p class="review-author">Howard Chavez · Entrepreneur</p>
-          </article>
-
-          <article class="card review-card">
-            <p class="review-text">
-              "I can't thank Paul's Auto Body enough for their incredible work on my vehicle.
-              They handled everything after an accident and made sure every detail was perfect.
-              I won't trust anyone else with my car."
-            </p>
-            <p class="review-author">Lucas Elliot · Designer</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section section-light">
-      <div class="container">
-        <header class="section-header">
-          <h2>Frequently asked questions</h2>
-          <p class="section-intro">
-            Quick answers to common questions about repairs, insurance, and timing.
-          </p>
-        </header>
-
-        <div class="faq-grid" itemscope itemtype="https://schema.org/FAQPage">
-          <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" open>
-            <summary itemprop="name">Do you work with my insurance company?</summary>
-            <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">
-                Yes. We work with all major insurance companies and can help you understand
-                your estimate and next steps.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <summary itemprop="name">Can I bring my car even if the other driver was at fault?</summary>
-            <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">
-                Yes. You can choose the repair shop. We can coordinate with the responsible
-                insurance company as needed.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <summary itemprop="name">How long will repairs take?</summary>
-            <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">
-                Timing depends on the damage and parts availability, but we will give you
-                an estimated timeline after the inspection and keep you updated.
-              </p>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section section-light contact-section">
-      <div class="container contact-grid">
-        <div>
-          <header class="section-header">
-            <h2>Request a call back</h2>
-            <p class="section-intro">
-              Share a few details about your car and the damage. We will call you to confirm
-              details, timing, and next steps.
-            </p>
-          </header>
-
-          <form
-            class="contact-form"
-            id="callback-form-main"
-            action="https://formspree.io/f/your-form-id"
-            method="POST"
-          >
-            <input type="hidden" name="_subject" value="New Appointment Request - Paul's Auto Body" />
-
-            <p class="required-note">Fields marked with * are required</p>
-
-            <div class="form-row">
-              <label for="name-main">Name *</label>
-              <input id="name-main" name="name" type="text" autocomplete="name" required />
-            </div>
-
-            <div class="form-row">
-              <label for="phone-main">Phone Number *</label>
-              <input id="phone-main" name="phone" type="tel" autocomplete="tel" required />
-            </div>
-
-            <div class="form-row">
-              <label for="email-main">Email</label>
-              <input id="email-main" name="email" type="email" autocomplete="email" />
-            </div>
-
-            <div class="form-row">
-              <label for="description-main">Description *</label>
-              <textarea
-                id="description-main"
-                name="description"
-                rows="4"
-                placeholder="What happened? Vehicle make, model, year, and insurance if you have it."
-                required
-              ></textarea>
-            </div>
-
-            <div class="form-row">
-              <label for="date-main">Preferred appointment date</label>
-              <input id="date-main" name="date" type="date" />
-            </div>
-
-            <button type="submit" class="btn btn-primary full-width">
-              Book an appointment
-            </button>
-            <p class="small">
-              For urgent help, call the office at
-              <a href="tel:+14089950770">(408) 995-0770</a> or cell at
-              <a href="tel:+14084994368">(408) 499-4368</a>.
-            </p>
-          </form>
-        </div>
-
-        <aside class="card contact-info">
-          <h3>Contact & shop details</h3>
-          <p>
-            <strong>Paul's Auto Body Services</strong><br />
-            680 N 13th St<br />
-            San Jose, CA 95112<br />
-            United States
-          </p>
-
-          <p>
-            Office: <a href="tel:+14089950770">(408) 995-0770</a><br />
-            Cell: <a href="tel:+14084994368">(408) 499-4368</a><br />
-            Email: <a href="mailto:Autobody741@gmail.com">Autobody741@gmail.com</a>
-          </p>
-
-          <p>
-            Week Days: 24 hours<br />
-            Saturday: 24 hours<br />
-            Sunday: 24 hours
-          </p>
-
-          <div class="map-wrapper">
-            <iframe
-              title="Paul's Auto Body Location"
-              src="https://www.google.com/maps?q=680+N+13th+St,+San+Jose,+CA+95112&output=embed"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- BOTTOM CTA -->
-    <section class="section section-soft bottom-cta">
-      <div class="container bottom-cta-inner">
-        <div class="bottom-cta-text">
-          <h2>Had an accident? We can help today.</h2>
-          <p>
-            Call now or send a quick request so we can get your vehicle on the schedule
-            and back on the road.
-          </p>
-        </div>
-        <div class="bottom-cta-actions">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1>
+          We bring <span class="gradient-text">wrecked cars</span> back to life.
+        </h1>
+        <p class="hero-description">
+          San Jose's most trusted auto body shop. Expert collision repair, custom paint, and complete restoration services with precision and care.
+        </p>
+        <div class="hero-actions">
           <a href="tel:+14089950770" class="btn btn-primary">
             <i class="ri-phone-fill"></i>
-            <span>Call (408) 995-0770</span>
+            Call (408) 995-0770
           </a>
-          <a href="#contact" class="btn btn-outline">
-            <i class="ri-calendar-line"></i>
-            <span>Book Online</span>
+          <a href="#services" class="btn btn-ghost">
+            <i class="ri-arrow-right-line"></i>
+            View Services
           </a>
         </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">25+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">5,000+</span>
+            <span class="stat-label">Cars Restored</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">4.6★</span>
+            <span class="stat-label">Customer Rating</span>
+          </div>
+        </div>
       </div>
-    </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>
-        © <span id="year"></span> Paul's Auto Body. All rights reserved.
-      </p>
-      <p class="small">Powered by Paul's Auto Body</p>
+      <div class="hero-image">
+        <div class="hero-card">
+          <h3>🚗 Get a Free Estimate</h3>
+          <form class="hero-form" action="https://formspree.io/f/your-form-id" method="POST">
+            <input type="text" name="name" class="form-input" placeholder="Your Name" required />
+            <input type="tel" name="phone" class="form-input" placeholder="Phone Number" required />
+            <input type="email" name="email" class="form-input" placeholder="Email Address" />
+            <textarea name="message" class="form-input" rows="3" placeholder="Tell us about the damage..."></textarea>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              Request Callback
+              <i class="ri-arrow-right-line"></i>
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    const yearEl = document.getElementById("year");
-    if (yearEl) {
-      yearEl.textContent = new Date().getFullYear();
-    }
+  <!-- Services -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Complete Auto Body Services</h2>
+        <p class="section-description">
+          From minor dents to major collision repair, we handle everything with expert precision and factory-quality results.
+        </p>
+      </div>
 
-    const navToggle = document.getElementById("nav-toggle");
-    const navMobile = document.getElementById("nav-mobile");
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="ri-car-washing-line"></i>
+          </div>
+          <h3>Collision Repair</h3>
+          <p>Complete collision repair and paint refinishing to restore your vehicle to pre-accident condition.</p>
+          <ul>
+            <li>Frame straightening</li>
+            <li>Panel replacement</li>
+            <li>Structural repairs</li>
+            <li>Safety inspections</li>
+          </ul>
+        </div>
 
-    if (navToggle && navMobile) {
-      navToggle.addEventListener("click", () => {
-        navMobile.classList.toggle("nav-mobile-open");
-      });
-
-      navMobile.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-          navMobile.classList.remove("nav-mobile-open");
-        });
-      });
-    }
-  </script>
-</body>
-</html>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="ri-paint-brush-line"></i>
+          </div>
+          <h3>Custom Paint</h3>
+          <p>Professional paint services with color-matching technology for a seamless finish.</p>
+          <ul>
+            <li>Color matching</li>
