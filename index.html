@@ -1025,3 +1025,1243 @@
       height: 100%;
       object-fit: cover;
     }
+
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.6));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover::after {
+      opacity: 1;
+    }
+
+    /* FAQ Section */
+    .faq {
+      padding: 100px 40px;
+      background: var(--color-gray-50);
+    }
+
+    .faq-grid {
+      display: grid;
+      gap: 16px;
+      margin-top: 48px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .faq-item {
+      background: white;
+      border: 2px solid var(--color-gray-200);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .faq-item:hover {
+      border-color: var(--color-primary);
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 24px 28px;
+      background: none;
+      border: none;
+      text-align: left;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--color-dark);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .faq-icon {
+      font-size: 24px;
+      color: var(--color-primary);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+    }
+
+    .faq-answer-content {
+      padding: 0 28px 24px;
+      color: var(--color-gray-600);
+      line-height: 1.7;
+    }
+
+    /* Insurance Partners */
+    .insurance {
+      padding: 80px 40px;
+      background: white;
+      text-align: center;
+    }
+
+    .insurance h2 {
+      font-size: 32px;
+      margin-bottom: 48px;
+      color: var(--color-dark);
+    }
+
+    .insurance-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      flex-wrap: wrap;
+      opacity: 0.6;
+    }
+
+    .insurance-logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--color-gray-400);
+    }
+
+    /* CTA Section */
+    .cta {
+      padding: 100px 40px;
+      background: var(--gradient-primary);
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      animation: rotate 20s linear infinite;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta h2 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 800;
+      margin-bottom: 24px;
+      letter-spacing: -1px;
+    }
+
+    .cta p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      opacity: 0.95;
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 100px 40px;
+      background: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 60px;
+      margin-top: 64px;
+    }
+
+    .contact-form {
+      background: var(--color-gray-50);
+      padding: 48px;
+      border-radius: 24px;
+      border: 2px solid var(--color-gray-200);
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--color-dark);
+    }
+
+    textarea.form-input {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .info-card {
+      background: var(--gradient-primary);
+      color: white;
+      padding: 32px;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+    }
+
+    .info-card h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .info-card p {
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 16px;
+    }
+
+    .info-card a {
+      color: white;
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .info-card a:hover {
+      opacity: 0.8;
+    }
+
+    .map-container {
+      border-radius: 20px;
+      overflow: hidden;
+      height: 300px;
+      border: 2px solid var(--color-gray-200);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--color-dark);
+      color: var(--color-gray-400);
+      padding: 80px 40px 40px;
+    }
+
+    .footer-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+
+    .footer-brand h3 {
+      color: white;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand p {
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 18px;
+    }
+
+    .social-link:hover {
+      background: var(--gradient-primary);
+      transform: translateY(-2px);
+    }
+
+    .footer-col h4 {
+      color: white;
+      font-size: 16px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 12px;
+    }
+
+    .footer-col a {
+      color: var(--color-gray-400);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .hero-container {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-step::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        padding: 16px 20px;
+      }
+
+      .hero {
+        padding: 80px 20px 60px;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .services,
+      .process,
+      .gallery,
+      .cta,
+      .contact,
+      .before-after,
+      .testimonials,
+      .faq {
+        padding: 60px 20px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .btn-ghost.hide-mobile {
+        display: none;
+      }
+
+      .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+      }
+
+      .carousel-btn-prev {
+        left: 20px;
+      }
+
+      .carousel-btn-next {
+        right: 20px;
+      }
+
+      .carousel-overlay {
+        padding: 30px;
+      }
+
+      .carousel-content h3 {
+        font-size: 24px;
+      }
+
+      .carousel-content p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="animated-bg"></div>
+
+  <div class="top-alert">
+    <i class="ri-phone-line"></i>
+    <strong>24/7 Emergency Service</strong> - Call Now: (408) 995-0770
+  </div>
+
+  <header class="header" id="header">
+    <nav class="nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">PA</div>
+        <div class="logo-text">
+          <div class="logo-title">Paul's Auto Body</div>
+          <div class="logo-subtitle">Since 1995</div>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="header-actions">
+        <a href="tel:+14089950770" class="btn btn-ghost hide-mobile">
+          <i class="ri-phone-line"></i>
+          Call Now
+        </a>
+        <a href="#contact" class="btn btn-primary">
+          <i class="ri-calendar-check-line"></i>
+          Book Appointment
+        </a>
+        <button class="mobile-menu-btn">
+          <i class="ri-menu-line"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1>
+          We bring <span class="gradient-text">wrecked cars</span> back to life.
+        </h1>
+        <p class="hero-description">
+          San Jose's most trusted auto body shop. Expert collision repair, custom paint, and complete restoration services with precision and care.
+        </p>
+        <div class="hero-actions">
+          <a href="tel:+14089950770" class="btn btn-primary">
+            <i class="ri-phone-fill"></i>
+            Office: (408) 995-0770
+          </a>
+          <a href="tel:+14084994368" class="btn btn-ghost">
+            <i class="ri-smartphone-line"></i>
+            Cell: (408) 499-4368
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">25+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">5,000+</span>
+            <span class="stat-label">Cars Restored</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">4.6★</span>
+            <span class="stat-label">Customer Rating</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <div class="hero-card">
+          <h3>🚗 Get a Free Estimate</h3>
+          <form class="hero-form" action="https://formspree.io/f/your-form-id" method="POST">
+            <input type="text" name="name" class="form-input" placeholder="Your Name" required />
+            <input type="tel" name="phone" class="form-input" placeholder="Phone Number" required />
+            <input type="email" name="email" class="form-input" placeholder="Email Address" />
+            <textarea name="message" class="form-input" rows="3" placeholder="Tell us about the damage..."></textarea>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              Request Callback
+              <i class="ri-arrow-right-line"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="image-carousel-section">
+    <div class="carousel-container">
+      <div class="carousel-track" id="mainCarousel">
+        <div class="carousel-slide">
+          <img src="https://images.pexels.com/photos/3807269/pexels-photo-3807269.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Professional auto painting">
+          <div class="carousel-overlay">
+            <div class="carousel-content">
+              <h3>Professional Auto Painting</h3>
+              <p>State-of-the-art paint booth for factory-quality finishes</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="https://images.pexels.com/photos/3807310/pexels-photo-3807310.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Expert technicians">
+          <div class="carousel-overlay">
+            <div class="carousel-content">
+              <h3>Expert Technicians</h3>
+              <p>Certified professionals with decades of combined experience</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="https://images.pexels.com/photos/4489732/pexels-photo-4489732.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Quality inspection">
+          <div class="carousel-overlay">
+            <div class="carousel-content">
+              <h3>Quality Inspection</h3>
+              <p>Every vehicle undergoes rigorous quality checks before delivery</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn carousel-btn-prev" onclick="moveCarousel(-1)">
+        <i class="ri-arrow-left-s-line"></i>
+      </button>
+      <button class="carousel-btn carousel-btn-next" onclick="moveCarousel(1)">
+        <i class="ri-arrow-right-s-line"></i>
+      </button>
+      <div class="carousel-indicators">
+        <button class="carousel-indicator active" onclick="goToSlide(0)"></button>
+        <button class="carousel-indicator" onclick="goToSlide(1)"></button>
+        <button class="carousel-indicator" onclick="goToSlide(2)"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust-badges">
+    <div class="container">
+      <div class="badges-grid">
+        <div class="badge-item">
+          <div class="badge-icon">
+            <i class="ri-shield-check-line"></i>
+          </div>
+          <h3>Certified Experts</h3>
+          <p>ASE certified technicians</p>
+        </div>
+        <div class="badge-item">
+          <div class="badge-icon">
+            <i class="ri-time-line"></i>
+          </div>
+          <h3>24/7 Emergency</h3>
+          <p>Always available when you need us</p>
+        </div>
+        <div class="badge-item">
+          <div class="badge-icon">
+            <i class="ri-hand-heart-line"></i>
+          </div>
+          <h3>All Insurance</h3>
+          <p>We work with all carriers</p>
+        </div>
+        <div class="badge-item">
+          <div class="badge-icon">
+            <i class="ri-medal-line"></i>
+          </div>
+          <h3>Quality Guaranteed</h3>
+          <p>Warranty on all repairs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Complete Auto Body Services</h2>
+        <p class="section-description">
+          From minor dents to major collision repair, we handle everything with expert precision and factory-quality results.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="ri-car-washing-line"></i>
+          </div>
+          <h3>Collision Repair</h3>
+          <p>Complete collision repair and paint refinishing to restore your vehicle to pre-accident condition.</p>
+          <ul>
+            <li>Frame straightening & alignment</li>
+            <li>Panel replacement & repair</li>
+            <li>Structural damage restoration</li>
+            <li>Safety system inspection</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="ri-paint-brush-line"></i>
+          </div>
+          <h3>Custom Paint & Refinishing</h3>
+          <p>Professional paint services with color-matching technology for a seamless finish.</p>
+          <ul>
+            <li>Computer color matching</li>
+            <li>Custom paint jobs</li>
+            <li>Clear coat application</li>
+            <li>Scratch & scuff removal</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="ri-truck-line"></i>
+          </div>
+          <h3>Truck & Fleet Services</h3>
+          <p>Specialized services for commercial vehicles, trucks, and fleet management.</p>
+          <ul>
+            <li>Semi truck body repair</li>
+            <li>Commercial van repairs</li>
+            <li>Fleet maintenance programs</li>
+            <li>Flexible scheduling options</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="ri-tools-line"></i>
+          </div>
+          <h3>Dent & Scratch Repair</h3>
+          <p>Expert removal of dents, dings, and scratches to restore your vehicle's appearance.</p>
+          <ul>
+            <li>Paintless dent repair</li>
+            <li>Door ding removal</li>
+            <li>Bumper repair & replacement</li>
+            <li>Minor collision fixes</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="ri-home-4-line"></i>
+          </div>
+          <h3>Pickup & Delivery</h3>
+          <p>Convenient pickup and delivery service for your damaged vehicle.</p>
+          <ul>
+            <li>Free pickup from home or work</li>
+            <li>Regular progress updates</li>
+            <li>Delivery upon completion</li>
+            <li>Contactless service available</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="ri-shield-check-line"></i>
+          </div>
+          <h3>Insurance Claims Assistance</h3>
+          <p>We handle all the paperwork and work directly with your insurance company.</p>
+          <ul>
+            <li>All insurance companies accepted</li>
+            <li>Direct billing available</li>
+            <li>Claims process guidance</li>
+            <li>Detailed estimates provided</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="before-after">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Work</span>
+        <h2 class="section-title">Before & After Transformations</h2>
+        <p class="section-description">
+          See the dramatic difference our expert technicians make on every vehicle we repair.
+        </p>
+      </div>
+
+      <div class="before-after-grid">
+        <div class="before-after-card">
+          <div class="before-after-images">
+            <div class="ba-image">
+              <img src="https://images.pexels.com/photos/4489734/pexels-photo-4489734.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Damaged bumper">
+              <div class="ba-label">Before</div>
+            </div>
+            <div class="ba-image">
+              <img src="https://images.pexels.com/photos/3807310/pexels-photo-3807310.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Repaired bumper">
+              <div class="ba-label">After</div>
+            </div>
+          </div>
+          <div class="before-after-info">
+            <h3>Front Bumper Collision</h3>
+            <p>Complete bumper replacement, paint matching, and detailing</p>
+          </div>
+        </div>
+
+        <div class="before-after-card">
+          <div class="before-after-images">
+            <div class="ba-image">
+              <img src="https://images.pexels.com/photos/4489732/pexels-photo-4489732.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Damaged side panel">
+              <div class="ba-label">Before</div>
+            </div>
+            <div class="ba-image">
+              <img src="https://images.pexels.com/photos/6200707/pexels-photo-6200707.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Repaired side panel">
+              <div class="ba-label">After</div>
+            </div>
+          </div>
+          <div class="before-after-info">
+            <h3>Side Panel Repair</h3>
+            <p>Dent removal, panel repair, and custom paint application</p>
+          </div>
+        </div>
+
+        <div class="before-after-card">
+          <div class="before-after-images">
+            <div class="ba-image">
+              <img src="https://images.pexels.com/photos/3807269/pexels-photo-3807269.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Paint damage">
+              <div class="ba-label">Before</div>
+            </div>
+            <div class="ba-image">
+              <img src="https://images.pexels.com/photos/3807316/pexels-photo-3807316.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Perfect paint">
+              <div class="ba-label">After</div>
+            </div>
+          </div>
+          <div class="before-after-info">
+            <h3>Full Body Repaint</h3>
+            <p>Complete paint restoration with ceramic coating protection</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">How It Works</span>
+        <h2 class="section-title">Simple 4-Step Process</h2>
+        <p class="section-description">
+          From your first call to picking up your repaired vehicle, we make the process easy and transparent.
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h3>Contact Us</h3>
+          <p>Call us or fill out our online form. Share photos of the damage and we'll provide an initial assessment.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h3>Get An Estimate</h3>
+          <p>Bring your vehicle in for a detailed inspection. We'll create a comprehensive estimate and work with your insurance.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h3>Expert Repair</h3>
+          <p>Our certified technicians perform all repairs using quality parts and advanced techniques. We keep you updated throughout.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h3>Quality Check & Delivery</h3>
+          <p>Every repair undergoes rigorous quality inspection. We deliver your vehicle looking better than ever.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" style="background: rgba(255,255,255,0.2); color: white;">Reviews</span>
+        <h2 class="section-title" style="color: white;">What Our Customers Say</h2>
+        <p class="section-description" style="color: rgba(255,255,255,0.8);">
+          Don't just take our word for it. Here's what our satisfied customers have to say about their experience.
+        </p>
+      </div>
+
+      <div class="testimonials-carousel">
+        <div class="testimonial-track" id="testimonialTrack">
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">
+                "Absolutely thrilled with the exceptional service provided by Paul's Auto Body! From the moment I walked in, I was greeted with professionalism and genuine care. They went above and beyond and delivered outstanding results."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">HC</div>
+                <div class="author-info">
+                  <h4>Howard Chavez</h4>
+                  <p>Entrepreneur</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">
+                "I can't thank Paul's Auto Body enough for their incredible work on my vehicle. They handled everything after an accident and made sure every detail was perfect. I won't trust anyone else with my car."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">LE</div>
+                <div class="author-info">
+                  <h4>Lucas Elliot</h4>
+                  <p>Designer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">
+                "Outstanding service from start to finish. The team was professional, kept me informed throughout the repair process, and my car looks brand new. Highly recommend Paul's Auto Body to anyone needing collision repair!"
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">SM</div>
+                <div class="author-info">
+                  <h4>Sarah Martinez</h4>
+                  <p>Business Owner</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-controls">
+          <button class="testimonial-btn" onclick="moveTestimonial(-1)">
+            <i class="ri-arrow-left-s-line"></i>
+          </button>
+          <button class="testimonial-btn" onclick="moveTestimonial(1)">
+            <i class="ri-arrow-right-s-line"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Gallery</span>
+        <h2 class="section-title">See Our Work In Action</h2>
+        <p class="section-description">
+          Take a look at some of the vehicles we've restored to their former glory.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/3807755/pexels-photo-3807755.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Car repair in progress">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/6200707/pexels-photo-6200707.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Freshly painted vehicle">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/3807316/pexels-photo-3807316.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Detail work on car">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/3807269/pexels-photo-3807269.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Paint booth work">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/3807310/pexels-photo-3807310.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Technician working">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/4489732/pexels-photo-4489732.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Quality inspection">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">FAQ</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-description">
+          Get answers to the most common questions about our services and repair process.
+        </p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            Do you work with my insurance company?
+            <i class="ri-add-line faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Yes! We work with all major insurance companies including State Farm, Allstate, Geico, Progressive, and more. We can handle all the paperwork and communicate directly with your insurance adjuster to make the process as smooth as possible for you.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            How long will my repair take?
+            <i class="ri-add-line faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Repair time depends on the extent of the damage and parts availability. Minor repairs may take 2-3 days, while major collision work can take 1-2 weeks. We'll provide you with an estimated timeline after our initial inspection and keep you updated throughout the process.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            Do you offer a warranty on repairs?
+            <i class="ri-add-line faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Absolutely! We stand behind our work with a comprehensive warranty on all repairs and paint work. The specific warranty terms vary by service, but we'll provide you with detailed warranty information when we complete your estimate.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            Can I choose my own repair shop?
+            <i class="ri-add-line faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Yes! You have the legal right to choose your own auto body shop, regardless of where your insurance company suggests. Your insurance must honor your choice and pay for quality repairs at the shop you select.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            Do you provide rental car assistance?
+            <i class="ri-add-line faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              While we don't provide rental cars directly, we can help coordinate rental car services through your insurance company if your policy includes rental coverage. We work with several local rental agencies to make this process easy for you.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            What forms of payment do you accept?
+            <i class="ri-add-line faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              We accept all major credit cards, debit cards, cash, and checks. For insurance claims, we can bill your insurance company directly. We also offer financing options for larger repairs. Contact us to discuss payment arrangements that work for you.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="insurance">
+    <div class="container">
+      <h2>We Work With All Major Insurance Companies</h2>
+      <div class="insurance-logos">
+        <div class="insurance-logo">State Farm</div>
+        <div class="insurance-logo">Allstate</div>
+        <div class="insurance-logo">Geico</div>
+        <div class="insurance-logo">Progressive</div>
+        <div class="insurance-logo">Farmers</div>
+        <div class="insurance-logo">USAA</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta-content">
+      <h2>Ready to Restore Your Vehicle?</h2>
+      <p>Get your free estimate today and experience the Paul's Auto Body difference.</p>
+      <div class="cta-actions">
+        <a href="tel:+14089950770" class="btn btn-white">
+          <i class="ri-phone-fill"></i>
+          Call (408) 995-0770
+        </a>
+        <a href="#contact" class="btn btn-ghost" style="border-color: rgba(255,255,255,0.3); color: white;">
+          <i class="ri-calendar-line"></i>
+          Book Online
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Contact Us</span>
+        <h2 class="section-title">Get Your Free Estimate Today</h2>
+        <p class="section-description">
+          Fill out the form below or call us directly. We're here to help get your vehicle back on the road.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div>
+          <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+            <div class="form-group">
+              <label class="form-label">Full Name *</label>
+              <input type="text" name="name" class="form-input" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone Number *</label>
+              <input type="tel" name="phone" class="form-input" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" name="email" class="form-input" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Vehicle Information *</label>
+              <input type="text" name="vehicle" class="form-input" placeholder="Year, Make, Model" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Description of Damage *</label>
+              <textarea name="description" class="form-input" placeholder="Please describe the damage and how it occurred..." required></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Preferred Appointment Date</label>
+              <input type="date" name="date" class="form-input" />
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <i class="ri-send-plane-fill"></i>
+              Submit Request
+            </button>
+          </form>
+        </div>
+
+        <div class="contact-info">
+          <div class="info-card">
+            <h3>
+              <i class="ri-map-pin-line"></i>
+              Visit Our Shop
+            </h3>
+            <p><i class="ri-map-pin-2-fill"></i> 680 N 13th St, San Jose, CA 95112</p>
+            <p><i class="ri-time-line"></i> Mon-Fri: 9:00 AM – 5:00 PM</p>
+            <p><i class="ri-phone-fill"></i> 24/7 Emergency Service</p>
+          </div>
+
+          <div class="info-card" style="background: var(--gradient-accent);">
+            <h3>
+              <i class="ri-phone-line"></i>
+              Contact Information
+            </h3>
+            <p><i class="ri-phone-fill"></i> Office: <a href="tel:+14089950770">(408) 995-0770</a></p>
+            <p><i class="ri-smartphone-line"></i> Cell: <a href="tel:+14084994368">(408) 499-4368</a></p>
+            <p><i class="ri-mail-line"></i> <a href="mailto:Autobody741@gmail.com">Autobody741@gmail.com</a></p>
+          </div>
+
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps?q=680+N+13th+St,+San+Jose,+CA+95112&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Paul's Auto Body</h3>
+        <p>San Jose's trusted auto body shop since 1995. Expert collision repair, custom paint, and complete restoration services.</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="ri-facebook-fill"></i></a>
+          <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
+          <a href="#" class="social-link"><i class="ri-twitter-x-line"></i></a>
+          <a href="#" class="social-link"><i class="ri-youtube-line"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Collision Repair</a></li>
+          <li><a href="#services">Custom Paint</a></li>
+          <li><a href="#services">Dent Removal</a></li>
+          <li><a href="#services">Truck Repair</a></li>
+          <li><a href="#services">Insurance Claims</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Get Estimate</a></li>
+          <li><a href="#">Book Appointment</a></li>
+          <li><a href="#">Emergency Service</a></li>
+          <li><a href="#">Warranty Info</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Paul's Auto Body. All rights reserved. | San Jose, CA</p>
+    </div>
+  </footer>
+
+  <script>
+    // Update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Main Carousel
+    let currentSlide = 0;
+    const carousel = document.getElementById('mainCarousel');
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const indicators = document.querySelectorAll('.carousel-indicator');
+
+    function moveCarousel(direction) {
+      currentSlide += direction;
+      if (currentSlide < 0) currentSlide = slides.length - 1;
+      if (currentSlide >= slides.length) currentSlide = 0;
+      updateCarousel();
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      updateCarousel();
+    }
+
+    function updateCarousel() {
+      carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+      indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === currentSlide);
+      });
+    }
+
+    // Auto-play carousel
+    setInterval(() => {
+      moveCarousel(1);
+    }, 5000);
+
+    // Testimonials Carousel
+    let currentTestimonial = 0;
+    const testimonialTrack = document.getElementById('testimonialTrack');
+    const testimonialSlides = testimonialTrack.querySelectorAll('.testimonial-slide');
+
+    function moveTestimonial(direction) {
+      currentTestimonial += direction;
+      if (currentTestimonial < 0) currentTestimonial = testimonialSlides.length - 1;
+      if (currentTestimonial >= testimonialSlides.length) currentTestimonial = 0;
+      testimonialTrack.style.transform = `translateX(-${currentTestimonial * 100}%)`;
+    }
+
+    // Auto-play testimonials
+    setInterval(() => {
+      moveTestimonial(1);
+    }, 6000);
+
+    // FAQ Toggle
+    function toggleFAQ(button) {
+      const item = button.parentElement;
+      const isActive = item.classList.contains('active');
+      
+      // Close all FAQs
+      document.querySelectorAll('.faq-item').forEach(faq => {
+        faq.classList.remove('active');
+      });
+      
+      // Open clicked FAQ if it wasn't active
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
